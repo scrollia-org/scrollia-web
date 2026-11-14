@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es" data-i18n-title="browse.metaTitle" data-i18n-description="meta.description">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrollia</title>
+  <meta name="description" content="">
+
+  <meta name="scrollia-api" content="https://api.scrollia.org">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FAF7F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161815" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <script>
+    (function () {
+      var theme;
+      try { theme = localStorage.getItem("scrollia-theme"); } catch (_) {}
+      if (theme !== "light" && theme !== "dark" && theme !== "amoled") {
+        theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+
+  <link rel="preload" href="assets/fonts/fraunces-semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/literata-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="tokens.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=14">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido" data-i18n="nav.skip">Saltar al contenido</a>
+
+  <header class="nav">
+    <a class="nav__logo" href="index.html" aria-label="Scrollia">
+      <img src="assets/icons/favicon.svg" alt="" width="32" height="32">
+      <span aria-hidden="true">crollia</span>
+    </a>
+    <nav class="nav__links" aria-label="Principal" data-i18n-aria="nav.label">
+      <a href="catalog.html" aria-current="page" data-i18n="nav.catalog">Catálogo</a>
+      <a href="index.html#app" data-i18n="nav.app">App</a>
+      <a href="index.html#mision" data-i18n="nav.mission">Misión</a>
+    </nav>
+    <div class="nav__tools">
+      <select class="nav__lang" aria-label="Idioma" data-i18n-aria="nav.language">
+        <option value="es" lang="es">Español</option>
+        <option value="en" lang="en">English</option>
+        <option value="fr" lang="fr">Français</option>
+        <option value="de" lang="de">Deutsch</option>
+        <option value="pt" lang="pt">Português</option>
+        <option value="zh" lang="zh-Hans">中文</option>
+      </select>
+      <button type="button" class="nav__theme" aria-label="Cambiar a tema oscuro" data-i18n-aria="nav.themeToDark">
+        <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+        <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.75v2M12 19.25v2M4.75 12h-2M21.25 12h-2M6.9 6.9 5.5 5.5M18.5 18.5l-1.4-1.4M6.9 17.1l-1.4 1.4M18.5 5.5l-1.4 1.4"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Full catalog: search and language filtering through GET /books -->
+  <main id="contenido" class="section browse">
+    <h1 class="browse__title" data-i18n="catalog.title">Una biblioteca universal</h1>
+
+    <form class="browse__filters" role="search">
+      <label class="browse__search">
+        <span class="visually-hidden" data-i18n="browse.search">Buscar por título o autor</span>
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.25"/><path d="m20 20-4.5-4.5"/></svg>
+        <input type="search" name="q" autocomplete="off" enterkeyhint="search"
+               placeholder="Buscar por título o autor" data-i18n-placeholder="browse.search">
+      </label>
+      <div class="browse__pickers">
+        <select class="browse__picker" name="lang" aria-label="Idioma" data-i18n-aria="browse.language" hidden></select>
+        <select class="browse__picker" name="genre" aria-label="Género" data-i18n-aria="browse.genre" hidden></select>
+      </div>
+    </form>
+
+    <div class="browse__bar">
+      <p class="browse__count" aria-live="polite" data-i18n="catalog.loading">Cargando catálogo…</p>
+      <label class="browse__sort">
+        <span data-i18n="browse.sort">Ordenar por</span>
+        <select class="browse__picker browse__picker--quiet" name="sort">
+          <option value="popular" data-i18n="browse.sortPopular">Popularidad</option>
+          <option value="title" data-i18n="browse.sortTitle">Título A–Z</option>
+          <option value="author" data-i18n="browse.sortAuthor">Autor A–Z</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Loading placeholders, results, no results, or error -->
+    <div class="shelf" aria-busy="true">
+      <noscript><p class="shelf__message">Activa JavaScript para ver el catálogo.</p></noscript>
+    </div>
+    <nav class="pager" aria-label="Páginas del catálogo" data-i18n-aria="browse.pages" hidden></nav>
+    <div class="browse__empty" hidden>
+      <p class="shelf__message"></p>
+      <button type="button" class="btn btn--secondary" data-i18n="browse.clear">Borrar la búsqueda</button>
+    </div>
+    <div class="shelf__error" hidden>
+      <p class="shelf__message" data-i18n="catalog.error">No pudimos cargar el catálogo ahora mismo.</p>
+      <button type="button" class="btn btn--secondary" data-i18n="catalog.retry">Reintentar</button>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <img src="assets/icons/favicon.svg" alt="Scrollia" width="28" height="28">
+      <span aria-hidden="true">crollia</span>
+    </div>
+    <div class="footer__text">
+      <p data-i18n="footer.built">Construido sobre el corpus del <a href="https://www.gutenberg.org" rel="noopener">Project Gutenberg</a>, con ediciones de <a href="https://standardebooks.org" rel="noopener">Standard Ebooks</a></p>
+      <p class="fine" data-i18n="footer.legal">Los libros son de dominio público en sus jurisdicciones correspondientes.</p>
+      <p class="fine"><a href="mailto:contact@scrollia.org">contact@scrollia.org</a></p>
+    </div>
+  </footer>
+
+  <script src="i18n.js?v=2"></script>
+  <script src="app.js"></script>
+  <script type="module" src="browse.js"></script>
+</body>
+</html>
