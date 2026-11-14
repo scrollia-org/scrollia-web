@@ -1,0 +1,1516 @@
+/* Scrollia · shared site styles.
+   Use tokens.css values rather than inventing component-specific tokens. */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.7;
+  transition: background var(--motion-duration) var(--motion-easing),
+              color var(--motion-duration) var(--motion-easing);
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+a { color: var(--library); text-decoration: none; }
+a:hover { color: var(--library-deep); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--library);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  inset-inline-start: var(--space-md);
+  top: calc(-1 * var(--space-xl));
+  background: var(--library);
+  color: var(--on-library);
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+}
+.skip-link:focus { top: var(--space-md); color: var(--on-library); }
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ---------- typographic utilities ---------- */
+
+.caption {
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* Gold rule: gold decorates the label and is never its text color. */
+.caption::before {
+  content: "";
+  width: var(--space-lg);
+  height: 1px;
+  background: var(--gold);
+}
+
+.lead {
+  font-size: var(--text-body-lg);
+  color: var(--ink-soft);
+  max-width: 58ch;
+}
+
+.fine {
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  color: var(--ink-soft);
+}
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.15; }
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  max-width: calc(72rem - 2 * var(--space-lg));
+  margin: 0 auto;
+}
+
+/* ---------- navigation ---------- */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--space-md) var(--space-lg);
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-h3);
+  color: var(--ink);
+  margin-inline-end: auto;
+}
+.nav__logo:hover { color: var(--ink); }
+
+.nav__links {
+  display: flex;
+  gap: var(--space-lg);
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+}
+
+.nav__links a { color: var(--ink); }
+.nav__links a:hover { color: var(--library); }
+
+.nav__tools {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+/* Native select: keyboard, screen reader and mobile support without custom JS. */
+.nav__lang, .work__select {
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  color: var(--ink-soft);
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  height: 36px;
+  padding: 0 var(--space-sm);
+  cursor: pointer;
+  transition: color var(--motion-duration) var(--motion-easing),
+              border-color var(--motion-duration) var(--motion-easing);
+}
+.nav__lang:hover, .work__select:hover { color: var(--ink); border-color: var(--ink-soft); }
+.nav__lang:focus-visible, .work__select:focus-visible { outline: 2px solid var(--library); outline-offset: 2px; }
+.work__select { color: var(--ink); }
+
+.nav__theme {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: color var(--motion-duration) var(--motion-easing),
+              border-color var(--motion-duration) var(--motion-easing);
+}
+.nav__theme:hover { color: var(--ink); border-color: var(--ink-soft); }
+
+.icon--sun { display: none; }
+:is([data-theme="dark"], [data-theme="amoled"]) .icon--sun { display: block; }
+:is([data-theme="dark"], [data-theme="amoled"]) .icon--moon { display: none; }
+
+/* ---------- continue reading ---------- */
+
+.continue {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-lg) 0;
+}
+
+.continue__rail {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 8.5rem;
+  gap: var(--space-lg);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+  padding-block-end: var(--space-sm);
+}
+
+.continue__rail li { scroll-snap-align: start; }
+
+.continue__book {
+  display: flex;
+  flex-direction: column;
+  color: var(--ink);
+}
+
+.continue__book:hover { color: var(--ink); }
+.continue__book:hover .continue__title { color: var(--library); }
+
+.continue__cover {
+  aspect-ratio: 2 / 3;
+  inline-size: 100%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--paper-raised);
+}
+
+/* Progress is information, not an action: soft ink on `border`. */
+.continue__progress {
+  display: block;
+  block-size: 2px;
+  margin-block-start: var(--space-sm);
+  background: var(--border);
+}
+
+.continue__progress span {
+  display: block;
+  block-size: 100%;
+  background: var(--ink-soft);
+}
+
+.continue__percent {
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin-block: var(--space-xs);
+}
+
+.continue__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  transition: color var(--motion-duration) var(--motion-easing);
+}
+
+.continue__author {
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  color: var(--ink-soft);
+  margin-block-start: var(--space-xs);
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+/* Two or three balanced lines in every language: larger type split the tagline
+   into a jagged four-line block. */
+.hero h1 {
+  font-size: clamp(2.5rem, 4.2vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+  margin-bottom: var(--space-lg);
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-lg);
+}
+
+/* Trust signals stay on one line below the button rather than in their own section. */
+.hero__proof {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-lg);
+  margin-top: var(--space-lg);
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  color: var(--ink-soft);
+}
+
+.hero__proof li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.hero__icon {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Three upright, non-overlapping covers, with the center one slightly taller:
+   titles sit over the artwork and a fanned layout covered them. */
+.hero__covers {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  width: 100%;
+}
+
+.hero__covers > .cover-frame,
+.hero__covers > .cover-placeholder {
+  flex: 1 1 0;
+  min-width: 0;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+}
+
+.hero__covers > :nth-child(odd) { transform: translateY(var(--space-md)); }
+.hero__covers > :nth-child(2) { transform: translateY(calc(-1 * var(--space-md))); }
+/* With only one work available, show one large upright cover. */
+.hero__covers > :only-child {
+  flex: none;
+  transform: none;
+  width: min(100%, 15rem);
+  margin-inline: auto;
+}
+
+/* On desktop the header feels like a cover but has a height cap: the shelf
+   must peek into view below it, or the screen looks like the end of the page. */
+@media (min-width: 901px) {
+  .hero { min-height: min(70svh, 40rem); align-content: center; }
+  #catalogo { padding-bottom: var(--space-xxl); }
+  .section--mision { padding-block: var(--space-xxl); }
+}
+
+/* Without a catalog to show, the headline takes the full width. */
+.hero--plain { grid-template-columns: minmax(0, 1fr); }
+.hero--plain .hero__covers { display: none; }
+
+.cover-placeholder {
+  display: block;
+  aspect-ratio: 2 / 3;
+  background: var(--paper-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.cover-frame {
+  position: relative;
+  display: block;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background: var(--paper-raised);
+}
+
+.cover-frame__placeholder {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.cover-frame__image {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity var(--motion-duration) var(--motion-easing);
+}
+
+.cover-frame.is-loaded .cover-frame__image { opacity: 1; }
+
+.cover--text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  overflow: hidden;
+  background: var(--paper-raised);
+  color: var(--ink);
+  text-align: center;
+}
+
+.cover__title {
+  font-family: var(--font-display);
+  font-size: var(--text-body);
+  font-weight: 600;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.cover__author {
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+/* ---------- buttons ---------- */
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: var(--text-body);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--motion-duration) var(--motion-easing),
+              color var(--motion-duration) var(--motion-easing),
+              border-color var(--motion-duration) var(--motion-easing);
+}
+
+.btn--primary { background: var(--library); color: var(--on-library); }
+.btn--primary:hover { background: var(--library-deep); color: var(--on-library); }
+
+.btn--secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+.btn--secondary:hover { border-color: var(--ink); color: var(--ink); }
+
+.btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: default;
+}
+.btn--primary[aria-disabled="true"]:hover { background: var(--library); }
+
+/* ---------- sections ---------- */
+
+.section {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.section h2 { font-size: var(--text-h2); margin-bottom: var(--space-md); }
+
+.legal { max-width: 50rem; }
+.legal h1 { font-size: var(--text-h1); margin-bottom: var(--space-md); }
+.legal section > h1 { margin-top: var(--space-xl); }
+.legal h2 { margin-top: var(--space-lg); }
+.legal p { margin-bottom: var(--space-md); }
+.legal .divider { margin: var(--space-xl) 0; }
+.legal__meta { color: var(--ink-soft); font-family: var(--font-ui); font-size: var(--text-small); }
+
+.section__intro {
+  color: var(--ink-soft);
+  font-size: var(--text-body-lg);
+  max-width: 58ch;
+  margin-bottom: var(--space-lg);
+}
+
+/* ---------- classics shelf ---------- */
+
+.shelf {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr));
+  gap: var(--space-lg) var(--space-md);
+}
+
+/* The card is a link: the whole card is the target, so its title is not underlined. */
+.book {
+  display: flex;
+  flex-direction: column;
+  color: var(--ink);
+}
+.book:hover { color: var(--ink); }
+.book:hover .book__title { color: var(--library); }
+
+/* Always use a shadow and no border: the cover is an object on the table, and
+   another gray outline around already framed artwork made it look like a sketch. */
+.book__cover {
+  aspect-ratio: 2 / 3;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  margin-bottom: var(--space-md);
+  transition: transform var(--motion-duration) var(--motion-easing);
+}
+
+.book:hover .book__cover { transform: translateY(calc(-1 * var(--space-xs))); }
+
+.book__lang {
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin-bottom: var(--space-xs);
+}
+
+.book__title {
+  font-size: var(--text-body-lg);
+  font-weight: 500;
+  margin-bottom: var(--space-xs);
+  transition: color var(--motion-duration) var(--motion-easing);
+}
+
+.book__author {
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  color: var(--ink-soft);
+}
+
+.book--placeholder .cover-placeholder { margin-bottom: var(--space-md); }
+
+.catalog__count {
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  color: var(--ink-soft);
+  margin: calc(-1 * var(--space-md)) 0 var(--space-lg);
+}
+
+.catalog__all {
+  display: inline-block;
+  margin-top: var(--space-lg);
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  font-weight: 500;
+}
+
+.catalog__all::after { content: " →"; }
+.catalog__all:dir(rtl)::after { content: " ←"; }
+
+/* ---------- full catalog ---------- */
+
+.browse__title { font-size: var(--text-h1); font-weight: 600; margin-bottom: var(--space-lg); }
+
+/* Search accepts free text and filters narrow results: keep the controls separate. */
+.browse__filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.browse__search {
+  flex: 1 1 18rem;
+  max-width: 28rem;
+  min-block-size: 2.75rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0 var(--space-md);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--paper-raised);
+  color: var(--ink-soft);
+}
+
+.browse__search:focus-within { border-color: var(--library); outline: 1px solid var(--library); }
+
+.browse__search input {
+  flex: 1;
+  min-width: 0;
+  padding: var(--space-sm) 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: var(--text-body);
+  line-height: 1.5;
+}
+
+.browse__search input::placeholder { color: var(--ink-soft); }
+
+/* Language and genre: native selects beside search, with matching height,
+   border and radius; twelve languages and ten genres as buttons filled the
+   header. Draw the arrow with two currentColor gradients, adding no icon or color. */
+.browse__pickers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.browse__picker {
+  appearance: none;
+  min-block-size: 2.75rem;
+  padding: 0 calc(var(--space-md) + 1rem) 0 var(--space-md);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background-color: var(--paper-raised);
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+                    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: calc(100% - 1.15rem) 55%, calc(100% - 0.8rem) 55%;
+  background-size: 0.35rem 0.35rem;
+  background-repeat: no-repeat;
+  color: var(--ink-soft);
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  cursor: pointer;
+  transition: background-color var(--motion-duration) var(--motion-easing),
+              border-color var(--motion-duration) var(--motion-easing);
+}
+
+.browse__picker:hover { border-color: var(--ink-soft); color: var(--ink); }
+.browse__picker:focus-visible { outline: 2px solid var(--library); outline-offset: 2px; }
+
+/* Active filters use the selected FilterChip tint from the app so it is
+   immediately clear what is narrowing the list. */
+.browse__pickers .browse__picker:not(:has(option[value=""]:checked)) {
+  background-color: color-mix(in srgb, var(--library) 18%, var(--paper));
+  border-color: transparent;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* Sorting does not narrow results: show it as text beside the count, without a box. */
+.browse__picker--quiet {
+  min-block-size: 2.25rem;
+  padding-inline: var(--space-xs) calc(var(--space-xs) + 1rem);
+  border-color: transparent;
+  background-color: transparent;
+  background-position: calc(100% - 0.65rem) 55%, calc(100% - 0.3rem) 55%;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* Count on the left and sorting on the right: sorting belongs with the result,
+   not between the filters, because it does not narrow the list. */
+.browse__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.browse__count {
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  color: var(--ink-soft);
+  min-height: 1.7em;
+}
+
+.browse__sort {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  color: var(--ink-soft);
+}
+
+/* Pagination: chip-shaped numbers, selected tint for the current page,
+   and Previous and Next at the ends. */
+.pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+}
+
+.pager__pages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pager__page, .pager__step, .pager__gap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: 2.5rem;
+  min-block-size: 2.5rem;
+  padding: 0 var(--space-sm);
+  border-radius: var(--radius-sm);
+  color: var(--ink-soft);
+}
+
+.pager__page, .pager__step {
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: background var(--motion-duration) var(--motion-easing),
+              border-color var(--motion-duration) var(--motion-easing);
+}
+
+.pager__step { padding: 0 var(--space-md); }
+a.pager__page:hover, a.pager__step:hover { border-color: var(--ink-soft); color: var(--ink); }
+.pager__step[aria-disabled="true"] { opacity: 0.55; }
+
+.pager__page[aria-current="page"] {
+  background: color-mix(in srgb, var(--library) 18%, var(--paper));
+  border-color: transparent;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.pager a:focus-visible { outline: 2px solid var(--library); outline-offset: 2px; }
+
+.browse__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.nav__links a[aria-current="page"] { color: var(--ink); }
+
+/* Empty and error states: typographic treatment. */
+.shelf__message {
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.shelf__error {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+/* `hidden` overrides every component `display` value. */
+[hidden] { display: none !important; }
+
+/* ---------- work page ---------- */
+
+.work { padding-top: var(--space-lg); }
+
+.work__back {
+  display: inline-flex;
+  gap: var(--space-sm);
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  margin-bottom: var(--space-md);
+}
+.work__back::before { content: "←"; }
+.work__back:dir(rtl)::before { content: "→"; }
+
+/* Contained cover on the left; all reading content on the right. */
+.work__head {
+  display: grid;
+  grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+.work__cover {
+  position: sticky;
+  top: var(--space-lg);
+}
+
+.work__cover > * {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+}
+
+.work__info { padding-top: var(--space-sm); }
+
+/* While loading, the language label has no text: without this rule its gold
+   rule would float below the cover placeholder. */
+.work__lang:empty { display: none; }
+
+.work__title {
+  font-size: var(--text-h1);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.work__author {
+  font-size: var(--text-body-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.work__life { white-space: nowrap; }
+
+.work__meta {
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  color: var(--ink-soft);
+  margin-bottom: var(--space-md);
+}
+
+/* Book language: the same control as the interface language selector. */
+.work__pick {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  color: var(--ink-soft);
+}
+
+.work__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.work__actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+.work__actions .icon { flex: none; }
+
+.work__edition {
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  color: var(--ink-soft);
+  margin-top: var(--space-md);
+}
+
+.work__synopsis {
+  max-width: 65ch;
+  margin-top: var(--space-lg);
+}
+
+.work h2 { font-size: var(--text-h3); }
+.work__heading {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+/* AI-generated text: decorative gold line sparkle plus the word, which carries the information. */
+.ai-icon {
+  width: 1em;
+  height: 1em;
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -0.125em;
+  margin-inline-end: var(--space-xs);
+}
+.ai-mark {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 var(--space-sm);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  color: var(--ink-soft);
+  line-height: 1.6;
+  cursor: help;
+}
+
+.work__note, .work__attribution {
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  color: var(--ink-soft);
+}
+.work__note { margin-bottom: var(--space-sm); }
+.work__attribution { margin-top: var(--space-md); }
+
+.work__text p {
+  font-size: var(--text-reader);
+  line-height: 1.7;
+}
+.work__text p + p { margin-top: var(--space-md); }
+
+.work__state {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+/* ---------- band ---------- */
+
+/* The page's only visual break: a full-width library-green band (the elevated
+   surface in dark mode, avoiding glare) where the reader page stands out like an open book. */
+.band {
+  --band-bg: var(--library-deep);
+  --band-ink: var(--on-library);
+  background: var(--band-bg);
+  color: var(--band-ink);
+}
+
+:is([data-theme="dark"], [data-theme="amoled"]) .band {
+  --band-bg: var(--paper-raised);
+  --band-ink: var(--ink);
+}
+
+.band .section { padding-block: var(--space-xxl); }
+.band .caption { color: color-mix(in srgb, var(--band-ink) 75%, transparent); }
+.band .reader-demo__page { border-color: transparent; }
+.band .swatch[aria-checked="true"] { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+.band .btn--secondary { color: var(--band-ink); border-color: color-mix(in srgb, var(--band-ink) 40%, transparent); }
+
+/* On green, invert the primary button: paper with green ink. */
+[data-theme="light"] .band .btn--primary { background: var(--paper); color: var(--library-deep); }
+[data-theme="light"] .band .btn--primary:hover { background: var(--paper-raised); color: var(--library-deep); }
+
+/* ---------- app ---------- */
+
+.section--app {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.app__list {
+  list-style: none;
+  margin-bottom: var(--space-lg);
+}
+
+.app__list li {
+  position: relative;
+  padding-inline-start: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+/* Use a typographic dash rather than a 1px rule: at fractional heights the
+   browser blurred each rule differently and they looked like three colors. */
+.app__list li::before {
+  content: "—";
+  position: absolute;
+  inset-inline-start: 0;
+  color: var(--gold);
+}
+
+.app__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+/* Reader preview: use reading-theme colors, not site-theme colors. */
+.reader-demo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.reader-demo__page {
+  position: relative;
+  background: var(--reader-bg);
+  color: var(--reader-ink);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-lg);
+  overflow: hidden;
+  transition: background var(--motion-duration) var(--motion-easing),
+              color var(--motion-duration) var(--motion-easing);
+}
+
+.reader-demo__chapter {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: 500;
+  line-height: 1.15;
+  margin-top: var(--space-md);
+}
+
+.reader-demo__meta {
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--reader-ink) 65%, transparent);
+  margin: var(--space-sm) 0 var(--space-lg);
+}
+
+.reader-demo__text {
+  font-family: var(--font-body);
+  font-size: var(--text-reader);
+  line-height: 1.7;
+  max-width: 65ch;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.reader-demo__themes {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.swatch {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: var(--reader-bg);
+  color: var(--reader-ink);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  cursor: pointer;
+  transition: border-color var(--motion-duration) var(--motion-easing);
+}
+
+.swatch__sample {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  line-height: 1;
+}
+
+.swatch[aria-checked="true"] {
+  border-color: var(--library);
+  box-shadow: 0 0 0 1px var(--library);
+}
+
+/* ---------- quote / mission ---------- */
+
+/* Centered like a dedication page; the gold rule echoes the covers. */
+.section--mision {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.section--mision .section__intro { margin-bottom: var(--space-lg); }
+
+.mission__contact {
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  color: var(--ink-soft);
+}
+
+.quote { margin-bottom: var(--space-lg); }
+
+.quote::before {
+  content: "";
+  display: block;
+  width: calc(var(--space-xl) + var(--space-lg));
+  height: 2px;
+  background: var(--gold);
+  margin: 0 auto var(--space-lg);
+}
+
+.quote p {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-style: italic;
+  line-height: 1.3;
+  max-width: 30ch;
+  margin: 0 auto var(--space-sm);
+}
+
+.quote cite {
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  font-style: normal;
+  color: var(--ink-soft);
+}
+
+/* ---------- footer ---------- */
+
+.footer {
+  max-width: calc(72rem - 2 * var(--space-lg));
+  margin: var(--space-lg) auto 0;
+  padding: var(--space-lg) 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  color: var(--ink-soft);
+}
+
+.footer__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-display);
+  font-size: var(--text-body-lg);
+  font-weight: 600;
+  color: var(--ink);
+  margin-inline-end: auto;
+}
+
+.footer__text { text-align: end; }
+.footer .fine { margin-top: var(--space-xs); }
+
+/* ---------- web reader ---------- */
+
+/* Use reading-theme colors throughout; the site theme is already synchronized. */
+html:has(.reading) { scroll-behavior: auto; }
+
+.reading {
+  background: var(--reader-bg);
+  color: var(--reader-ink);
+}
+
+/* Progress stays visible but discreet: 2px of ink, never `library`. */
+.reading__progress {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: 1;
+  block-size: 2px;
+  background: color-mix(in srgb, var(--reader-ink) 8%, transparent);
+}
+
+.reading__progress span {
+  display: block;
+  inline-size: 0;
+  block-size: 100%;
+  background: color-mix(in srgb, var(--reader-ink) 45%, transparent);
+}
+
+/* The toolbar covers the line, so progress moves into its footer while visible. */
+.reading__bar {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--reader-bg);
+  border-block-end: 1px solid color-mix(in srgb, var(--reader-ink) 12%, transparent);
+  transition: transform var(--motion-duration) var(--motion-easing),
+              background var(--motion-duration) var(--motion-easing);
+}
+
+.reading__bar.is-hidden:not(:focus-within) { transform: translateY(-100%); }
+
+.reading__icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  inline-size: 40px;
+  block-size: 40px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.reading__icon:hover { background: color-mix(in srgb, var(--reader-ink) 8%, transparent); color: inherit; }
+.reading__icon:disabled { opacity: 0.3; cursor: default; background: transparent; }
+.reading__aa { font-family: var(--font-body); font-size: var(--text-reader); line-height: 1; }
+[dir="rtl"] .icon--flip { transform: scaleX(-1); }
+
+.reading__where {
+  flex: 1;
+  min-inline-size: 0;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.reading__title {
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reading__position {
+  display: flex;
+  justify-content: center;
+  gap: 0.35em;
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: color-mix(in srgb, var(--reader-ink) 65%, transparent);
+}
+
+.reading__chapter { min-inline-size: 0; overflow: hidden; text-overflow: ellipsis; }
+
+.reading__state {
+  min-block-size: 70vh;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--space-md);
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+}
+
+/* Page: Literata, 1.7 line height, 65ch at the active size, 24px margins. */
+.reading__book {
+  --reader-scale: 1;
+  max-inline-size: calc(65ch + 48px);
+  margin-inline: auto;
+  padding: calc(var(--space-xl) + var(--space-md)) 24px var(--space-xxl);
+  font-family: var(--font-body);
+  font-size: calc(var(--text-reader) * var(--reader-scale));
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+/* Paint each EPUB file as it approaches; the browser remembers its height. */
+.reading__book > section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 100vh;
+}
+
+/* No chapter divider: 56px of whitespace. */
+.reading__book > section + section { margin-block-start: 3.5rem; }
+
+.reading__book [data-i] { scroll-margin-block-start: 72px; }
+
+.reading__book :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.2;
+  margin-block: 1.5em 1em;
+}
+
+.reading__book h1 { font-size: 1.75em; }
+.reading__book h2 { font-size: 1.5em; }
+.reading__book h3 { font-size: 1.25em; }
+.reading__book :is(h4, h5, h6) { font-size: 1.1em; }
+
+/* Chapter numeral + title (Standard Ebooks and Scrollia hgroup). */
+.reading__book hgroup { margin-block: 1.5em 1em; }
+.reading__book hgroup > :is(h1, h2, h3, h4, h5, h6) { margin: 0; font-size: 1em; letter-spacing: 0.08em; }
+.reading__book hgroup > p {
+  margin: 0.35em 0 0;
+  font-family: var(--font-display);
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* Verse indentation shapes poems such as Alice's Mouse's Tale. */
+.reading__book [data-indent="1"] { padding-inline-start: 1em; }
+.reading__book [data-indent="2"] { padding-inline-start: 2em; }
+.reading__book [data-indent="3"] { padding-inline-start: 3em; }
+.reading__book [data-indent="4"] { padding-inline-start: 4em; }
+.reading__book [data-indent="5"] { padding-inline-start: 5em; }
+.reading__book [data-indent="6"] { padding-inline-start: 6em; }
+.reading__book [data-indent="7"] { padding-inline-start: 7em; }
+.reading__book [data-indent="8"] { padding-inline-start: 8em; }
+.reading__book [data-indent="9"] { padding-inline-start: 9em; }
+
+.reading__book :is(p, ul, ol, dl, pre, table, blockquote, figure) { margin-block-end: 1em; }
+.reading__book :is(ul, ol) { padding-inline-start: 1.5em; }
+.reading__book blockquote { margin-inline-start: 1.5em; }
+.reading__book dd { margin-inline-start: 1.5em; }
+.reading__book pre { font-family: inherit; white-space: pre-wrap; }
+.reading__book :is(sup, sub) { font-size: 0.7em; line-height: 0; }
+
+.reading__book table {
+  display: block;
+  max-inline-size: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.reading__book :is(td, th) { padding: 0.25em 0.5em; vertical-align: top; text-align: start; }
+
+.reading__book hr {
+  inline-size: 30%;
+  margin: 2em auto;
+  border: 0;
+  border-block-start: 1px solid color-mix(in srgb, var(--reader-ink) 20%, transparent);
+}
+
+/* Show complete illustrations, never cropped. */
+.reading__book img {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+  margin: 1.5em auto;
+}
+
+:is([data-reader-theme="night"], [data-reader-theme="amoled"]) .reading__book img { filter: brightness(0.92); }
+
+/* Black strokes on transparency: SVG title pages and logos, plus marked engravings. */
+:is([data-reader-theme="night"], [data-reader-theme="amoled"]) .reading__book img[data-line-art] { filter: invert(0.92); }
+
+.reading__book a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--reader-ink) 40%, transparent);
+  text-underline-offset: 0.15em;
+}
+
+/* Bottom sheets use the book's colors. */
+.sheet {
+  --sheet-ink: var(--reader-ink);
+  margin: auto auto 0;
+  inline-size: min(100%, 36rem);
+  max-inline-size: 100%;
+  max-block-size: 80vh;
+  padding: var(--space-md) var(--space-lg) var(--space-lg);
+  background: var(--reader-bg);
+  color: var(--reader-ink);
+  border: 1px solid color-mix(in srgb, var(--reader-ink) 12%, transparent);
+  border-block-end: 0;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  box-shadow: var(--shadow-card);
+  overflow-y: auto;
+  scrollbar-color: color-mix(in srgb, var(--reader-ink) 30%, transparent) transparent;
+}
+
+/* Only the contents list scrolls; the header and Close button stay fixed. */
+.sheet[open]:has(.toc) {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sheet .toc { min-block-size: 0; overflow-y: auto; }
+
+.sheet::backdrop { background: color-mix(in srgb, var(--reader-ink) 32%, transparent); }
+:is([data-reader-theme="night"], [data-reader-theme="amoled"]) .sheet::backdrop { background: rgb(0 0 0 / 0.6); }
+
+/* The text behind the sheet is the preview: do not dim it with an overlay. */
+[data-reader-theme] .sheet--settings::backdrop { background: transparent; }
+
+.sheet__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-block-end: var(--space-sm);
+}
+
+.sheet__head h2 { font-size: var(--text-h3); }
+
+.sheet__label {
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--reader-ink) 65%, transparent);
+  margin-block: var(--space-md) var(--space-sm);
+}
+
+.size {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.size__a { font-family: var(--font-body); font-size: var(--text-small); line-height: 1; }
+.size__a--big { font-size: var(--text-h3); }
+
+.size__range {
+  flex: 1;
+  accent-color: var(--reader-ink);
+  cursor: pointer;
+}
+
+.size__value {
+  min-inline-size: 4.5ch;
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  font-variant-numeric: tabular-nums;
+  text-align: end;
+}
+
+.reading__themes { display: flex; gap: var(--space-sm); }
+
+.sheet .swatch[aria-checked="true"] {
+  border-color: var(--sheet-ink);
+  box-shadow: 0 0 0 1px var(--sheet-ink);
+}
+
+/* Notes use the page font at the selected size. */
+.note__body {
+  font-family: var(--font-body);
+  font-size: calc(var(--text-reader) * var(--reader-scale, 1));
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+.note__body > * + * { margin-block-start: 1em; }
+.note__body :is(sup, sub) { font-size: 0.7em; line-height: 0; }
+.note__body a { color: inherit; text-decoration-color: color-mix(in srgb, var(--reader-ink) 40%, transparent); }
+.note__go { margin-block-start: var(--space-lg); }
+
+.toc { list-style: none; }
+
+.toc a {
+  display: block;
+  padding-block: var(--space-sm);
+  padding-inline-start: calc(var(--depth, 0) * var(--space-md));
+  border-block-end: 1px solid color-mix(in srgb, var(--reader-ink) 8%, transparent);
+  color: inherit;
+  line-height: 1.4;
+}
+
+.toc a:hover { color: inherit; text-decoration: underline; text-underline-offset: 0.15em; }
+.toc a[aria-current="true"] { font-weight: 600; }
+
+/* ---------- non-Latin scripts ---------- */
+
+/* Chinese has no uppercase letters to space. */
+:is(.caption, .reader-demo__meta, .book__lang, .reading__position, .sheet__label):lang(zh) { letter-spacing: normal; }
+
+/* Chinese has no italics: the browser would synthesize them by slanting glyphs. */
+:is(.quote p, .shelf__message):lang(zh) { font-style: normal; }
+
+/* Do not justify Chinese text. */
+.reader-demo__text:lang(zh) { hyphens: manual; text-align: start; }
+
+/* A title with another writing direction aligns with the page, not its own text direction. */
+:is(.book__lang, .book__title, .book__author, .continue__title, .continue__author) { text-align: match-parent; }
+
+/* ---------- dark theme ---------- */
+
+:is([data-theme="dark"], [data-theme="amoled"]) .book__cover img,
+:is([data-theme="dark"], [data-theme="amoled"]) .continue__cover img,
+:is([data-theme="dark"], [data-theme="amoled"]) .work__cover img,
+:is([data-theme="dark"], [data-theme="amoled"]) .hero__covers img { filter: brightness(0.92); }
+
+.work__loading { margin-block-end: var(--space-lg); }
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 900px) {
+  .hero, .section--app { grid-template-columns: minmax(0, 1fr); }
+  .hero { gap: var(--space-xl); }
+  .hero__covers { max-width: 26rem; justify-self: center; }
+}
+
+@media (max-width: 640px) {
+  .nav { flex-wrap: wrap; gap: var(--space-md); padding: var(--space-md); }
+  .nav__links { order: 3; width: 100%; gap: var(--space-md); }
+  .hero, .section, .continue { padding-inline: var(--space-md); }
+  .pager__pages { order: -1; flex-basis: 100%; }
+  .browse__pickers { flex-basis: 100%; }
+  .browse__pickers .browse__picker { flex: 1 1 0; min-inline-size: 0; }
+  .hero { padding-top: var(--space-lg); }
+  .band .section { padding-block: var(--space-xl); }
+  /* Two preview rows on the landing; the rest are under "View full catalog". */
+  #catalogo .shelf > :nth-child(n + 5) { display: none; }
+  .hero__actions .btn { flex: 1 1 12rem; justify-content: center; text-align: center; }
+  /* Read takes the full width; Download and Share share the row below. */
+  .work__actions .btn { flex: 1 1 auto; text-align: center; }
+  .work__actions .btn--primary { flex-basis: 100%; }
+  .divider, .footer { max-width: calc(100% - 2 * var(--space-md)); }
+  .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .reader-demo__page { padding: var(--space-lg) var(--space-md); }
+  .reader-demo__themes, .reading__themes { flex-wrap: wrap; }
+  .reader-demo__themes .swatch, .reading__themes .swatch { flex: 1 1 calc(50% - var(--space-sm)); }
+  .footer { flex-direction: column; gap: var(--space-md); }
+  .footer__text { text-align: start; }
+  .work__head { grid-template-columns: minmax(0, 1fr); gap: var(--space-md); }
+  .work__cover { position: static; width: min(10rem, 50%); margin-inline: auto; }
+  .work__info { padding-top: 0; }
+  .work__title { font-size: var(--text-h2); }
+  .reading__bar { padding-inline: var(--space-sm); gap: var(--space-xs); }
+  .sheet { padding-inline: var(--space-md); }
+}
+
+/* 44px targets: comfortable touch areas without enlarging the icons themselves. */
+@media (pointer: coarse) {
+  .nav__lang, .work__select, .nav__theme, .reading__icon, .browse__picker, .swatch, .browse__search { min-block-size: 44px; }
+  .pager__page, .pager__step { min-block-size: 44px; min-inline-size: 44px; }
+  .nav__theme, .reading__icon { inline-size: 44px; }
+  .nav__links a {
+    display: inline-flex;
+    align-items: center;
+    min-block-size: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
