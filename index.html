@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es" data-i18n-description="meta.description">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrollia</title>
+  <meta name="description" content="Biblioteca libre de los clásicos universales. Lee en la web o en la app, sin anuncios, para siempre.">
+
+  <meta name="scrollia-api" content="https://api.scrollia.org">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#FAF7F0" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161815" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Scrollia">
+  <meta property="og:title" content="Scrollia">
+  <meta property="og:description" content="Biblioteca libre de los clásicos universales. Sin anuncios, para siempre.">
+  <meta property="og:image" content="https://scrollia.org/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script>
+    (function () {
+      var theme;
+      try { theme = localStorage.getItem("scrollia-theme"); } catch (_) {}
+      if (theme !== "light" && theme !== "dark" && theme !== "amoled") {
+        theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+
+  <link rel="preload" href="assets/fonts/fraunces-semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/literata-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="tokens.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=14">
+</head>
+<body>
+
+  <a class="skip-link" href="#contenido" data-i18n="nav.skip">Saltar al contenido</a>
+
+  <header class="nav">
+    <a class="nav__logo" href="#" aria-label="Scrollia">
+      <img src="assets/icons/favicon.svg" alt="" width="32" height="32">
+      <span aria-hidden="true">crollia</span>
+    </a>
+    <nav class="nav__links" aria-label="Principal" data-i18n-aria="nav.label">
+      <a href="catalog.html" data-i18n="nav.catalog">Catálogo</a>
+      <a href="#app" data-i18n="nav.app">App</a>
+      <a href="#mision" data-i18n="nav.mission">Misión</a>
+    </nav>
+    <div class="nav__tools">
+      <select class="nav__lang" aria-label="Idioma" data-i18n-aria="nav.language">
+        <option value="es" lang="es">Español</option>
+        <option value="en" lang="en">English</option>
+        <option value="fr" lang="fr">Français</option>
+        <option value="de" lang="de">Deutsch</option>
+        <option value="pt" lang="pt">Português</option>
+        <option value="zh" lang="zh-Hans">中文</option>
+      </select>
+      <button type="button" class="nav__theme" aria-label="Cambiar a tema oscuro" data-i18n-aria="nav.themeToDark">
+        <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+        <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.75v2M12 19.25v2M4.75 12h-2M21.25 12h-2M6.9 6.9 5.5 5.5M18.5 18.5l-1.4-1.4M6.9 17.1l-1.4 1.4M18.5 5.5l-1.4 1.4"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Continue reading: the reader's own books come before the catalog -->
+    <section class="continue" aria-labelledby="seguir" hidden>
+      <h2 id="seguir" class="caption" data-i18n="continue.title">Seguir leyendo</h2>
+      <ol class="continue__rail"></ol>
+    </section>
+
+    <!-- Hero: prominent typography and original artwork for each edition -->
+    <section class="hero">
+      <div class="hero__text">
+        <p class="caption" data-i18n="hero.kicker">Biblioteca de dominio público</p>
+        <h1 data-i18n="hero.title">Los clásicos de la humanidad, gratis y para siempre.</h1>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="catalog.html" data-i18n="hero.ctaCatalog">Empezar a leer</a>
+          <a class="btn btn--secondary" href="#app" data-i18n="hero.ctaApp">Descargar la app</a>
+        </div>
+        <!-- Key benefits beside the button, with fine 1.5px line icons -->
+        <ul class="hero__proof">
+          <li><svg class="hero__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10.5 5.3 8.3 4.75 4 4.75v13c4.3 0 6.5.55 8 1.75 1.5-1.2 3.7-1.75 8-1.75v-13c-4.3 0-6.5.55-8 1.75z"/><path d="M12 6.5v13"/></svg><span data-i18n="feat.free.title">Sin anuncios</span></li>
+          <li><svg class="hero__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="m7.5 10.5 4.5 4.5 4.5-4.5"/><path d="M5 19.25h14"/></svg><span data-i18n="feat.offline.title">Lee sin conexión</span></li>
+          <li><svg class="hero__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.75" width="14" height="9.5" rx="1.5"/><path d="M8.25 10.75V8a3.75 3.75 0 0 1 7.5 0v2.75"/></svg><span data-i18n="feat.private.title">Sin rastreo</span></li>
+        </ul>
+      </div>
+      <!-- Covers of the most-read works, served by the API (/site) -->
+      <div class="hero__covers" aria-hidden="true">
+        <span class="cover-placeholder"></span>
+        <span class="cover-placeholder"></span>
+        <span class="cover-placeholder"></span>
+      </div>
+    </section>
+
+    <!-- Catalog: book cards with covers -->
+    <section id="catalogo" class="section">
+      <h2 data-i18n="catalog.title">Una biblioteca universal</h2>
+      <p class="catalog__count" data-i18n="catalog.loading">Cargando catálogo…</p>
+
+      <!-- Loading placeholders, results, or an error with Retry -->
+      <div class="shelf" aria-busy="true">
+        <noscript><p class="shelf__message">Activa JavaScript para ver el catálogo.</p></noscript>
+      </div>
+      <div class="shelf__error" hidden>
+        <p class="shelf__message" data-i18n="catalog.error">No pudimos cargar el catálogo ahora mismo.</p>
+        <button type="button" class="btn btn--secondary" data-i18n="catalog.retry">Reintentar</button>
+      </div>
+      <a class="catalog__all" href="catalog.html" data-i18n="catalog.all">Ver todo el catálogo</a>
+    </section>
+
+    <!-- App: the reader preview itself is the control;
+         the color band is the page's only visual break -->
+    <div class="band">
+    <section id="app" class="section section--app">
+      <div class="app__text">
+        <p class="caption" data-i18n="app.kicker">App para Android</p>
+        <h2 data-i18n="app.title">Tu biblioteca, en el bolsillo</h2>
+        <ul class="app__list">
+          <li data-i18n="app.point1">Desplazamiento continuo o páginas, como prefieras.</li>
+          <li data-i18n="app.point2">Tu progreso guardado en cada libro.</li>
+          <li data-i18n="app.point3">Tipografía ajustable y modo para dislexia.</li>
+        </ul>
+        <div class="app__actions">
+          <a class="btn btn--primary" href="https://github.com/scrollia-org/scrollia-android/releases/download/v1.0.3/Scrollia-v1.0.3.apk" rel="noopener" data-i18n="app.download">Descargar APK</a>
+          <span class="btn btn--secondary" aria-disabled="true" data-i18n="app.play">Google Play · muy pronto</span>
+        </div>
+      </div>
+
+      <div class="reader-demo" data-reader-theme="paper">
+        <div class="reader-demo__page">
+          <p class="reader-demo__chapter" data-i18n="app.readerChapter">Capítulo primero</p>
+          <p class="reader-demo__meta" data-i18n="app.readerMeta">Capítulo 1 de 52 · 3 %</p>
+          <p class="reader-demo__text" data-i18n="app.readerText">En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor. Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados, lantejas los viernes, algún palomino de añadidura los domingos, consumían las tres partes de su hacienda.</p>
+        </div>
+        <div class="reader-demo__themes" role="radiogroup" aria-label="Tema de lectura" data-i18n-aria="app.themeLabel">
+          <button type="button" role="radio" aria-checked="true" class="swatch" data-reader-theme="paper" data-reader-option="paper">
+            <span class="swatch__sample" aria-hidden="true">Aa</span>
+            <span data-i18n="app.themePaper">Papel</span>
+          </button>
+          <button type="button" role="radio" aria-checked="false" class="swatch" data-reader-theme="sepia" data-reader-option="sepia">
+            <span class="swatch__sample" aria-hidden="true">Aa</span>
+            <span data-i18n="app.themeSepia">Sepia</span>
+          </button>
+          <button type="button" role="radio" aria-checked="false" class="swatch" data-reader-theme="night" data-reader-option="night">
+            <span class="swatch__sample" aria-hidden="true">Aa</span>
+            <span data-i18n="app.themeNight">Nocturno</span>
+          </button>
+          <button type="button" role="radio" aria-checked="false" class="swatch" data-reader-theme="amoled" data-reader-option="amoled">
+            <span class="swatch__sample" aria-hidden="true">Aa</span>
+            <span data-i18n="app.themeAmoled">AMOLED</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <!-- Mission -->
+    <section id="mision" class="section section--mision">
+      <blockquote class="quote">
+        <p data-i18n="mission.quote">«El que lee mucho y anda mucho, ve mucho y sabe mucho.»</p>
+        <cite data-i18n="mission.quoteCite">— Miguel de Cervantes, Don Quijote</cite>
+      </blockquote>
+      <p class="section__intro" data-i18n="mission.text">Creemos que el patrimonio literario de la humanidad no debe estar tras un muro de pago. En Scrollia no hay muros: cualquier persona puede leerlo, en cualquier idioma.</p>
+      <p class="mission__contact" data-i18n="mission.contact">¿Ideas o erratas? <a href="mailto:contact@scrollia.org">contact@scrollia.org</a></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <img src="assets/icons/favicon.svg" alt="Scrollia" width="28" height="28">
+      <span aria-hidden="true">crollia</span>
+    </div>
+    <div class="footer__text">
+      <p data-i18n="footer.built">Construido sobre el corpus del <a href="https://www.gutenberg.org" rel="noopener">Project Gutenberg</a>, con ediciones de <a href="https://standardebooks.org" rel="noopener">Standard Ebooks</a></p>
+      <p class="fine" data-i18n="footer.legal">Los libros son de dominio público en sus jurisdicciones correspondientes.</p>
+      <p class="fine"><a href="privacy/" data-i18n="footer.privacy">Privacidad</a> · <a href="mailto:contact@scrollia.org">contact@scrollia.org</a></p>
+    </div>
+  </footer>
+
+  <script src="i18n.js?v=2"></script>
+  <script src="app.js"></script>
+  <script type="module" src="catalog.js"></script>
+  <script type="module" src="continue.js"></script>
+</body>
+</html>
