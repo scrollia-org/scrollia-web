@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "description": "Une bibliothèque gratuite des grands classiques du monde. À lire sur le web ou dans l'application, sans publicité, pour toujours."
+  },
+  "nav": {
+    "skip": "Aller au contenu",
+    "label": "Principale",
+    "catalog": "Catalogue",
+    "app": "Application",
+    "mission": "Mission",
+    "themeToDark": "Passer au thème sombre",
+    "themeToLight": "Passer au thème clair",
+    "language": "Langue"
+  },
+  "continue": {
+    "title": "Reprendre la lecture"
+  },
+  "hero": {
+    "kicker": "Bibliothèque du domaine public",
+    "title": "Les classiques de l'humanité, gratuits pour toujours.",
+    "ctaApp": "Télécharger l'app",
+    "ctaCatalog": "Commencer à lire"
+  },
+  "catalog": {
+    "title": "Une bibliothèque universelle",
+    "count": "{works} en {languages}.",
+    "works": {
+      "one": "{n} œuvre",
+      "many": "{n} œuvres",
+      "other": "{n} œuvres"
+    },
+    "languagesMany": "{n} langues",
+    "loading": "Chargement du catalogue…",
+    "error": "Impossible de charger le catalogue pour le moment.",
+    "retry": "Réessayer",
+    "all": "Voir tout le catalogue"
+  },
+  "browse": {
+    "metaTitle": "Catalogue · Scrollia",
+    "search": "Rechercher par titre ou auteur",
+    "language": "Langue",
+    "empty": "Aucune œuvre ne correspond à « {query} ».",
+    "clear": "Effacer la recherche",
+    "pages": "Pages du catalogue",
+    "prev": "Précédente",
+    "next": "Suivante",
+    "page": "Page {n}",
+    "pageOf": "page {page} sur {pages}",
+    "genre": "Genre",
+    "sort": "Trier par",
+    "sortPopular": "Popularité",
+    "sortTitle": "Titre A–Z",
+    "sortAuthor": "Auteur A–Z",
+    "allLanguages": "Toutes les langues",
+    "allGenres": "Tous les genres"
+  },
+  "feat": {
+    "free": {
+      "title": "Sans publicité"
+    },
+    "offline": {
+      "title": "Lecture hors ligne"
+    },
+    "private": {
+      "title": "Sans pistage"
+    }
+  },
+  "app": {
+    "kicker": "Application Android",
+    "title": "Votre bibliothèque, dans votre poche",
+    "point1": "Défilement continu ou pages, à vous de choisir.",
+    "point2": "Votre progression enregistrée dans chaque livre.",
+    "point3": "Typographie réglable et police adaptée à la dyslexie.",
+    "download": "Télécharger l'APK",
+    "play": "Google Play · bientôt",
+    "readerMeta": "Chapitre 1 sur 117 · 3 %",
+    "themeLabel": "Thème de lecture",
+    "themePaper": "Papier",
+    "themeSepia": "Sépia",
+    "themeNight": "Nuit",
+    "themeAmoled": "AMOLED",
+    "readerChapter": "Marseille. — L'arrivée",
+    "readerText": "Le 24 février 1815, la vigie de Notre-Dame de la Garde signala le trois-mâts le <i>Pharaon</i>, venant de Smyrne, Trieste et Naples. Comme d'habitude, un pilote côtier partit aussitôt du port, rasa le château d'If, et alla aborder le navire entre le cap de Morgion et l'île de Rion."
+  },
+  "mission": {
+    "text": "Nous croyons que le patrimoine littéraire de l'humanité ne doit pas se trouver derrière un mur payant. Chez Scrollia, il n'y a pas de murs : chacun peut le lire, dans n'importe quelle langue.",
+    "contact": "Une idée, une coquille ? <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>",
+    "quote": "« La lecture de tous les bons livres est comme une conversation avec les plus honnêtes gens des siècles passés. »",
+    "quoteCite": "— René Descartes, Discours de la méthode"
+  },
+  "footer": {
+    "built": "Construit sur le corpus du <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a>, avec des éditions de <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>",
+    "legal": "Les livres sont dans le domaine public dans leurs juridictions respectives.",
+    "privacy": "Confidentialité"
+  },
+  "work": {
+    "back": "Retour au catalogue",
+    "download": "Télécharger l'EPUB",
+    "edition": "Langue du livre",
+    "source": "Source : {source}",
+    "synopsis": "Résumé",
+    "synopsisIn": "Résumé en {language}.",
+    "attribution": "Texte de {source}, sous licence {license}.",
+    "translatedBy": "Traduction de {names}",
+    "aiTranslation": "Traduction par IA",
+    "aiUnreviewed": "Traduction par IA, pas encore relue par un humain",
+    "aiShort": "IA",
+    "synopsisAi": "Résumé rédigé avec l'IA",
+    "pages": {
+      "one": "{n} page",
+      "many": "environ {n} pages",
+      "other": "environ {n} pages"
+    },
+    "bce": "{n} av. J.-C.",
+    "notFound": "Cette œuvre n'est pas dans le catalogue.",
+    "error": "Impossible de charger cette œuvre pour le moment.",
+    "read": "Lire",
+    "continue": "Reprendre la lecture · {percent}",
+    "anonymous": "Anonyme",
+    "share": "Partager",
+    "shareCopied": "Lien copié",
+    "shareCopy": "Copiez ce lien",
+    "shareText": "« {title} », de {author}, gratuit sur Scrollia",
+    "shareTextAnonymous": "« {title} », gratuit sur Scrollia"
+  },
+  "reader": {
+    "back": "Retour à la fiche",
+    "contents": "Table des matières",
+    "settings": "Réglages de lecture",
+    "size": "Taille du texte",
+    "close": "Fermer",
+    "loading": "Ouverture du livre…",
+    "error": "Impossible d'ouvrir ce livre pour le moment.",
+    "notFound": "Ce livre n'est pas dans le catalogue.",
+    "offline": "Hors connexion. Les livres que vous ouvrez sont gardés pour être lus sans réseau ; celui-ci n'a pas encore été ouvert.",
+    "previous": "Chapitre précédent",
+    "next": "Chapitre suivant",
+    "note": "Note",
+    "noteGo": "Aller à la note"
+  },
+  "genres": {
+    "animal": "Animaux",
+    "children": "Jeunesse",
+    "classics": "Classiques",
+    "countries": "Pays",
+    "crime": "Policier",
+    "education": "Éducation",
+    "fiction": "Fiction",
+    "geography": "Géographie",
+    "history": "Histoire",
+    "literature": "Littérature",
+    "law": "Droit",
+    "music": "Musique",
+    "periodicals": "Périodiques",
+    "psychology": "Psychologie",
+    "philosophy": "Philosophie",
+    "religion": "Religion",
+    "romance": "Romance",
+    "science": "Sciences"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "description": "Eine kostenlose Bibliothek der großen Klassiker der Welt. Im Web oder in der App lesen, ohne Werbung, für immer."
+  },
+  "nav": {
+    "skip": "Zum Inhalt springen",
+    "label": "Hauptnavigation",
+    "catalog": "Katalog",
+    "app": "App",
+    "mission": "Mission",
+    "themeToDark": "Zum dunklen Design wechseln",
+    "themeToLight": "Zum hellen Design wechseln",
+    "language": "Sprache"
+  },
+  "continue": {
+    "title": "Weiterlesen"
+  },
+  "hero": {
+    "kicker": "Bibliothek gemeinfreier Werke",
+    "title": "Die Klassiker der Menschheit, für immer kostenlos.",
+    "ctaApp": "App herunterladen",
+    "ctaCatalog": "Jetzt lesen"
+  },
+  "catalog": {
+    "title": "Eine Weltbibliothek",
+    "count": "{works} auf {languages}.",
+    "works": {
+      "one": "{n} Werk",
+      "other": "{n} Werke"
+    },
+    "languagesMany": "{n} Sprachen",
+    "loading": "Katalog wird geladen …",
+    "error": "Der Katalog konnte gerade nicht geladen werden.",
+    "retry": "Erneut versuchen",
+    "all": "Ganzen Katalog ansehen"
+  },
+  "browse": {
+    "metaTitle": "Katalog · Scrollia",
+    "search": "Nach Titel oder Autor suchen",
+    "language": "Sprache",
+    "empty": "Keine Werke zu „{query}“ gefunden.",
+    "clear": "Suche löschen",
+    "pages": "Katalogseiten",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "page": "Seite {n}",
+    "pageOf": "Seite {page} von {pages}",
+    "genre": "Genre",
+    "sort": "Sortieren nach",
+    "sortPopular": "Beliebtheit",
+    "sortTitle": "Titel A–Z",
+    "sortAuthor": "Autor A–Z",
+    "allLanguages": "Alle Sprachen",
+    "allGenres": "Alle Genres"
+  },
+  "feat": {
+    "free": {
+      "title": "Keine Werbung"
+    },
+    "offline": {
+      "title": "Offline lesen"
+    },
+    "private": {
+      "title": "Kein Tracking"
+    }
+  },
+  "app": {
+    "kicker": "Android-App",
+    "title": "Deine Bibliothek in der Hosentasche",
+    "point1": "Fortlaufend scrollen oder blättern, wie du willst.",
+    "point2": "Dein Fortschritt wird in jedem Buch gespeichert.",
+    "point3": "Anpassbare Typografie und eine Schrift für Legasthenie.",
+    "download": "APK herunterladen",
+    "play": "Google Play · bald",
+    "readerMeta": "Teil 1 von 3 · 3 %",
+    "themeLabel": "Lesedesign",
+    "themePaper": "Papier",
+    "themeSepia": "Sepia",
+    "themeNight": "Nacht",
+    "themeAmoled": "AMOLED",
+    "readerChapter": "I.",
+    "readerText": "Als Gregor Samsa eines Morgens aus unruhigen Träumen erwachte, fand er sich in seinem Bett zu einem ungeheueren Ungeziefer verwandelt. Er lag auf seinem panzerartig harten Rücken und sah, wenn er den Kopf ein wenig hob, seinen gewölbten, braunen, von bogenförmigen Versteifungen geteilten Bauch, auf dessen Höhe sich die Bettdecke, zum gänzlichen Niedergleiten bereit, kaum noch erhalten konnte."
+  },
+  "mission": {
+    "text": "Wir glauben, dass das literarische Erbe der Menschheit nicht hinter einer Bezahlschranke liegen sollte. Bei Scrollia gibt es keine Schranken: Jeder Mensch kann es lesen, in jeder Sprache.",
+    "contact": "Ideen oder Tippfehler? <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>",
+    "quote": "„Wenn ein Buch und ein Kopf zusammenstoßen und es klingt hohl, ist denn das allemal im Buch?“",
+    "quoteCite": "— Georg Christoph Lichtenberg, Sudelbücher"
+  },
+  "footer": {
+    "built": "Aufgebaut auf dem Korpus von <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a>, mit Ausgaben von <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>",
+    "legal": "Die Bücher sind in ihren jeweiligen Rechtsordnungen gemeinfrei.",
+    "privacy": "Datenschutz"
+  },
+  "work": {
+    "back": "Zurück zum Katalog",
+    "download": "EPUB herunterladen",
+    "edition": "Sprache des Buchs",
+    "source": "Quelle: {source}",
+    "synopsis": "Zusammenfassung",
+    "synopsisIn": "Zusammenfassung auf {language}.",
+    "attribution": "Text von {source}, lizenziert unter {license}.",
+    "translatedBy": "Übersetzt von {names}",
+    "aiTranslation": "KI-Übersetzung",
+    "aiUnreviewed": "KI-Übersetzung, noch nicht von Menschen geprüft",
+    "aiShort": "KI",
+    "synopsisAi": "Inhaltsangabe mit KI verfasst",
+    "pages": {
+      "one": "{n} Seite",
+      "other": "etwa {n} Seiten"
+    },
+    "bce": "{n} v. Chr.",
+    "notFound": "Dieses Werk ist nicht im Katalog.",
+    "error": "Dieses Werk konnte gerade nicht geladen werden.",
+    "read": "Lesen",
+    "continue": "Weiterlesen · {percent}",
+    "anonymous": "Anonym",
+    "share": "Teilen",
+    "shareCopied": "Link kopiert",
+    "shareCopy": "Kopiere diesen Link",
+    "shareText": "„{title}“ von {author}, kostenlos auf Scrollia",
+    "shareTextAnonymous": "„{title}“, kostenlos auf Scrollia"
+  },
+  "reader": {
+    "back": "Zurück zur Werkseite",
+    "contents": "Inhalt",
+    "settings": "Leseeinstellungen",
+    "size": "Schriftgröße",
+    "close": "Schließen",
+    "loading": "Buch wird geöffnet …",
+    "error": "Dieses Buch konnte gerade nicht geöffnet werden.",
+    "notFound": "Dieses Buch ist nicht im Katalog.",
+    "offline": "Keine Verbindung. Geöffnete Bücher werden zum Offline-Lesen gespeichert; dieses hast du noch nicht geöffnet.",
+    "previous": "Vorheriges Kapitel",
+    "next": "Nächstes Kapitel",
+    "note": "Anmerkung",
+    "noteGo": "Zur Anmerkung"
+  },
+  "genres": {
+    "animal": "Tiere",
+    "children": "Kinder",
+    "classics": "Klassiker",
+    "countries": "Länder",
+    "crime": "Krimi",
+    "education": "Bildung",
+    "fiction": "Belletristik",
+    "geography": "Geografie",
+    "history": "Geschichte",
+    "literature": "Literatur",
+    "law": "Recht",
+    "music": "Musik",
+    "periodicals": "Zeitschriften",
+    "psychology": "Psychologie",
+    "philosophy": "Philosophie",
+    "religion": "Religion",
+    "romance": "Liebesroman",
+    "science": "Wissenschaft"
+  }
+}

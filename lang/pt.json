@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "description": "Uma biblioteca gratuita dos grandes clássicos do mundo. Leia na web ou no app, sem anúncios, para sempre."
+  },
+  "nav": {
+    "skip": "Pular para o conteúdo",
+    "label": "Principal",
+    "catalog": "Catálogo",
+    "app": "App",
+    "mission": "Missão",
+    "themeToDark": "Mudar para o tema escuro",
+    "themeToLight": "Mudar para o tema claro",
+    "language": "Idioma"
+  },
+  "continue": {
+    "title": "Continuar lendo"
+  },
+  "hero": {
+    "kicker": "Biblioteca de domínio público",
+    "title": "Os clássicos da humanidade, grátis para sempre.",
+    "ctaApp": "Baixar o app",
+    "ctaCatalog": "Começar a ler"
+  },
+  "catalog": {
+    "title": "Uma biblioteca universal",
+    "count": "{works} em {languages}.",
+    "works": {
+      "one": "{n} obra",
+      "many": "{n} obras",
+      "other": "{n} obras"
+    },
+    "languagesMany": "{n} idiomas",
+    "loading": "Carregando catálogo…",
+    "error": "Não foi possível carregar o catálogo agora.",
+    "retry": "Tentar de novo",
+    "all": "Ver todo o catálogo"
+  },
+  "browse": {
+    "metaTitle": "Catálogo · Scrollia",
+    "search": "Buscar por título ou autor",
+    "language": "Idioma",
+    "empty": "Nenhuma obra corresponde a “{query}”.",
+    "clear": "Limpar busca",
+    "pages": "Páginas do catálogo",
+    "prev": "Anterior",
+    "next": "Próxima",
+    "page": "Página {n}",
+    "pageOf": "página {page} de {pages}",
+    "genre": "Gênero",
+    "sort": "Ordenar por",
+    "sortPopular": "Popularidade",
+    "sortTitle": "Título A–Z",
+    "sortAuthor": "Autor A–Z",
+    "allLanguages": "Todos os idiomas",
+    "allGenres": "Todos os gêneros"
+  },
+  "feat": {
+    "free": {
+      "title": "Sem anúncios"
+    },
+    "offline": {
+      "title": "Leia offline"
+    },
+    "private": {
+      "title": "Sem rastreamento"
+    }
+  },
+  "app": {
+    "kicker": "App para Android",
+    "title": "Sua biblioteca no bolso",
+    "point1": "Rolagem contínua ou páginas, como preferir.",
+    "point2": "Seu progresso salvo em cada livro.",
+    "point3": "Tipografia ajustável e fonte adequada para dislexia.",
+    "download": "Baixar APK",
+    "play": "Google Play · em breve",
+    "readerMeta": "Capítulo 1 de 148 · 3%",
+    "themeLabel": "Tema de leitura",
+    "themePaper": "Papel",
+    "themeSepia": "Sépia",
+    "themeNight": "Noturno",
+    "themeAmoled": "AMOLED",
+    "readerChapter": "Do titulo",
+    "readerText": "Uma noite destas, vindo da cidade para o Engenho Novo, encontrei no trem da Central um rapaz aqui do bairro, que eu conheço de vista e de chapéo. Comprimentou-me, sentou-se ao pé de mim, falou da lua e dos ministros, e acabou recitando-me versos. A viagem era curta, e os versos póde ser que não fossem inteiramente maus."
+  },
+  "mission": {
+    "text": "Acreditamos que o patrimônio literário da humanidade não deve ficar atrás de um muro de pagamento. Na Scrollia não há muros: qualquer pessoa pode lê-lo, em qualquer idioma.",
+    "contact": "Ideias ou erros? <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>",
+    "quote": "“O livro é um mudo que fala, um surdo que responde, um cego que guia, um morto que vive.”",
+    "quoteCite": "— Padre António Vieira, Sermão de Nossa Senhora da Penha de França"
+  },
+  "footer": {
+    "built": "Construído sobre o acervo do <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a>, com edições da <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>",
+    "legal": "Os livros estão em domínio público em suas respectivas jurisdições.",
+    "privacy": "Privacidade"
+  },
+  "work": {
+    "back": "Voltar ao catálogo",
+    "download": "Baixar EPUB",
+    "edition": "Idioma do livro",
+    "source": "Fonte: {source}",
+    "synopsis": "Sinopse",
+    "synopsisIn": "Sinopse em {language}.",
+    "attribution": "Texto da {source}, sob a licença {license}.",
+    "translatedBy": "Tradução de {names}",
+    "aiTranslation": "Tradução com IA",
+    "aiUnreviewed": "Tradução com IA, ainda sem revisão humana",
+    "aiShort": "IA",
+    "synopsisAi": "Sinopse redigida com IA",
+    "pages": {
+      "one": "{n} página",
+      "many": "cerca de {n} páginas",
+      "other": "cerca de {n} páginas"
+    },
+    "bce": "{n} a.C.",
+    "notFound": "Esta obra não está no catálogo.",
+    "error": "Não foi possível carregar esta obra agora.",
+    "read": "Ler",
+    "continue": "Continuar lendo · {percent}",
+    "anonymous": "Anônimo",
+    "share": "Compartilhar",
+    "shareCopied": "Link copiado",
+    "shareCopy": "Copie este link",
+    "shareText": "“{title}”, de {author}, grátis na Scrollia",
+    "shareTextAnonymous": "“{title}”, grátis na Scrollia"
+  },
+  "reader": {
+    "back": "Voltar à ficha",
+    "contents": "Índice",
+    "settings": "Ajustes de leitura",
+    "size": "Tamanho do texto",
+    "close": "Fechar",
+    "loading": "Abrindo o livro…",
+    "error": "Não foi possível abrir este livro agora.",
+    "notFound": "Este livro não está no catálogo.",
+    "offline": "Sem conexão. Os livros que você abre ficam salvos para ler sem rede; este ainda não foi aberto.",
+    "previous": "Capítulo anterior",
+    "next": "Próximo capítulo",
+    "note": "Nota",
+    "noteGo": "Ir para a nota"
+  },
+  "genres": {
+    "animal": "Animais",
+    "children": "Infantil",
+    "classics": "Clássicos",
+    "countries": "Países",
+    "crime": "Crime",
+    "education": "Educação",
+    "fiction": "Ficção",
+    "geography": "Geografia",
+    "history": "História",
+    "literature": "Literatura",
+    "law": "Direito",
+    "music": "Música",
+    "periodicals": "Periódicos",
+    "psychology": "Psicologia",
+    "philosophy": "Filosofia",
+    "religion": "Religião",
+    "romance": "Romance",
+    "science": "Ciência"
+  }
+}

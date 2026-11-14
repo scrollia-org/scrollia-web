@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "description": "A free library of the world's classics. Read on the web or in the app, no ads, forever."
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "label": "Main",
+    "catalog": "Catalog",
+    "app": "App",
+    "mission": "Mission",
+    "themeToDark": "Switch to dark theme",
+    "themeToLight": "Switch to light theme",
+    "language": "Language"
+  },
+  "continue": {
+    "title": "Continue reading"
+  },
+  "hero": {
+    "kicker": "Public domain library",
+    "title": "Humanity's classics, free forever.",
+    "ctaApp": "Get the app",
+    "ctaCatalog": "Start reading"
+  },
+  "catalog": {
+    "title": "A universal library",
+    "count": "{works} in {languages}.",
+    "works": {
+      "one": "{n} work",
+      "other": "{n} works"
+    },
+    "languagesMany": "{n} languages",
+    "loading": "Loading catalog…",
+    "error": "We couldn't load the catalog right now.",
+    "retry": "Try again",
+    "all": "Browse the whole catalog"
+  },
+  "browse": {
+    "metaTitle": "Catalog · Scrollia",
+    "search": "Search by title or author",
+    "language": "Language",
+    "empty": "No works match “{query}”.",
+    "clear": "Clear search",
+    "pages": "Catalog pages",
+    "prev": "Previous",
+    "next": "Next",
+    "page": "Page {n}",
+    "pageOf": "page {page} of {pages}",
+    "genre": "Genre",
+    "sort": "Sort by",
+    "sortPopular": "Popularity",
+    "sortTitle": "Title A–Z",
+    "sortAuthor": "Author A–Z",
+    "allLanguages": "All languages",
+    "allGenres": "All genres"
+  },
+  "feat": {
+    "free": {
+      "title": "No ads"
+    },
+    "offline": {
+      "title": "Read offline"
+    },
+    "private": {
+      "title": "No tracking"
+    }
+  },
+  "app": {
+    "kicker": "Android app",
+    "title": "Your library, in your pocket",
+    "point1": "Continuous scrolling or pages, your choice.",
+    "point2": "Your progress saved in every book.",
+    "point3": "Adjustable typography and a dyslexia-friendly font.",
+    "download": "Download APK",
+    "play": "Google Play · coming soon",
+    "readerMeta": "Chapter 1 of 61 · 3%",
+    "themeLabel": "Reading theme",
+    "themePaper": "Paper",
+    "themeSepia": "Sepia",
+    "themeNight": "Night",
+    "themeAmoled": "AMOLED",
+    "readerChapter": "Chapter I",
+    "readerText": "It is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife. However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered as the rightful property of some one or other of their daughters."
+  },
+  "mission": {
+    "text": "We believe humanity's literary heritage should not be behind a paywall. At Scrollia there are no walls: anyone can read it, in any language.",
+    "contact": "Ideas or typos? <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>",
+    "quote": "“A good book is the precious life-blood of a master spirit, embalmed and treasured up on purpose to a life beyond life.”",
+    "quoteCite": "— John Milton, Areopagitica"
+  },
+  "footer": {
+    "built": "Built on the <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> corpus, with editions from <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>",
+    "legal": "Books are in the public domain in their respective jurisdictions.",
+    "privacy": "Privacy"
+  },
+  "work": {
+    "back": "Back to the catalog",
+    "download": "Download EPUB",
+    "edition": "Book language",
+    "source": "Source: {source}",
+    "synopsis": "Synopsis",
+    "synopsisIn": "Synopsis in {language}.",
+    "attribution": "Text from {source}, licensed under {license}.",
+    "translatedBy": "Translated by {names}",
+    "aiTranslation": "AI translation",
+    "aiUnreviewed": "AI translation, not yet reviewed by a person",
+    "aiShort": "AI",
+    "synopsisAi": "Synopsis written with AI",
+    "pages": {
+      "one": "{n} page",
+      "other": "about {n} pages"
+    },
+    "bce": "{n} BC",
+    "notFound": "This work isn't in the catalog.",
+    "error": "We couldn't load this work right now.",
+    "read": "Read",
+    "continue": "Continue reading · {percent}",
+    "anonymous": "Anonymous",
+    "share": "Share",
+    "shareCopied": "Link copied",
+    "shareCopy": "Copy this link",
+    "shareText": "“{title}” by {author}, free on Scrollia",
+    "shareTextAnonymous": "“{title}”, free on Scrollia"
+  },
+  "reader": {
+    "back": "Back to the book page",
+    "contents": "Contents",
+    "settings": "Reading settings",
+    "size": "Text size",
+    "close": "Close",
+    "loading": "Opening the book…",
+    "error": "We couldn't open this book right now.",
+    "notFound": "This book isn't in the catalog.",
+    "offline": "You're offline. Books you open are saved to read without a connection; you haven't opened this one yet.",
+    "previous": "Previous chapter",
+    "next": "Next chapter",
+    "note": "Note",
+    "noteGo": "Go to the note"
+  },
+  "genres": {
+    "animal": "Animals",
+    "children": "Children",
+    "classics": "Classics",
+    "countries": "Countries",
+    "crime": "Crime",
+    "education": "Education",
+    "fiction": "Fiction",
+    "geography": "Geography",
+    "history": "History",
+    "literature": "Literature",
+    "law": "Law",
+    "music": "Music",
+    "periodicals": "Periodicals",
+    "psychology": "Psychology",
+    "philosophy": "Philosophy",
+    "religion": "Religion",
+    "romance": "Romance",
+    "science": "Science"
+  }
+}
