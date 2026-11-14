@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrollia</title>
+  <meta name="description" content="">
+  <meta name="robots" content="noindex">
+
+  <meta name="scrollia-api" content="https://api.scrollia.org">
+  <meta name="color-scheme" content="light dark">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- One appearance decision shared with the site: Night or AMOLED in dark
+       mode; otherwise Sepia when selected, or Paper. -->
+  <script>
+    (function () {
+      var theme, reader;
+      try {
+        theme = localStorage.getItem("scrollia-theme");
+        reader = localStorage.getItem("scrollia-reader-theme");
+      } catch (_) {}
+      if (theme !== "light" && theme !== "dark" && theme !== "amoled") {
+        theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      var root = document.documentElement;
+      root.dataset.theme = theme;
+      root.dataset.readerTheme = theme === "dark" ? "night" : theme === "amoled" ? "amoled" : reader === "sepia" ? "sepia" : "paper";
+    })();
+  </script>
+
+  <link rel="preload" href="assets/fonts/literata-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="tokens.css?v=2">
+  <link rel="stylesheet" href="styles.css?v=14">
+</head>
+<body class="reading">
+
+  <!-- Web reader: the page belongs to the book. -->
+  <div class="reading__progress" aria-hidden="true"><span></span></div>
+
+  <header class="reading__bar">
+    <a class="reading__icon" href="catalog.html" aria-label="Volver a la ficha" data-i18n-aria="reader.back">
+      <svg class="icon icon--flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H5M11 5l-7 7 7 7"/></svg>
+    </a>
+    <div class="reading__where">
+      <p class="reading__title"></p>
+      <p class="reading__position"></p>
+    </div>
+    <button type="button" class="reading__icon" data-chapter="-1" aria-label="Capítulo anterior" data-i18n-aria="reader.previous" aria-keyshortcuts="ArrowLeft" disabled>
+      <svg class="icon icon--flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <button type="button" class="reading__icon" data-sheet="contents" aria-label="Índice" data-i18n-aria="reader.contents" disabled>
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></svg>
+    </button>
+    <button type="button" class="reading__icon" data-chapter="1" aria-label="Capítulo siguiente" data-i18n-aria="reader.next" aria-keyshortcuts="ArrowRight" disabled>
+      <svg class="icon icon--flip" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+    <button type="button" class="reading__icon reading__aa" data-sheet="settings" aria-label="Ajustes de lectura" data-i18n-aria="reader.settings">Aa</button>
+  </header>
+
+  <main id="contenido" class="reading__main" aria-busy="true">
+    <div class="reading__state">
+      <p class="shelf__message" data-i18n="reader.loading">Abriendo el libro…</p>
+      <button type="button" class="btn btn--secondary" data-i18n="catalog.retry" hidden>Reintentar</button>
+    </div>
+    <article class="reading__book" hidden></article>
+    <noscript><p class="shelf__message">Activa JavaScript para leer este libro.</p></noscript>
+  </main>
+
+  <dialog class="sheet" id="contents" aria-labelledby="contents-title">
+    <div class="sheet__head">
+      <h2 id="contents-title" data-i18n="reader.contents">Índice</h2>
+      <button type="button" class="reading__icon" data-close aria-label="Cerrar" data-i18n-aria="reader.close">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <ol class="toc"></ol>
+  </dialog>
+
+  <!-- Footnote: read it without losing the page. -->
+  <dialog class="sheet sheet--note" id="note" aria-labelledby="note-title">
+    <div class="sheet__head">
+      <h2 id="note-title"><span data-i18n="reader.note">Nota</span> <span class="note__mark"></span></h2>
+      <button type="button" class="reading__icon" data-close aria-label="Cerrar" data-i18n-aria="reader.close">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="note__body"></div>
+    <button type="button" class="btn btn--secondary note__go" data-i18n="reader.noteGo">Ir a la nota</button>
+  </dialog>
+
+  <!-- Two settings: size and theme. The text behind the sheet is the preview. -->
+  <dialog class="sheet sheet--settings" id="settings" aria-labelledby="settings-title">
+    <div class="sheet__head">
+      <h2 id="settings-title" data-i18n="reader.settings">Ajustes de lectura</h2>
+      <button type="button" class="reading__icon" data-close aria-label="Cerrar" data-i18n-aria="reader.close">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+
+    <p class="sheet__label" id="size-label" data-i18n="reader.size">Tamaño del texto</p>
+    <div class="size">
+      <span class="size__a" aria-hidden="true">A</span>
+      <input type="range" class="size__range" min="80" max="200" step="10" value="100" aria-labelledby="size-label">
+      <span class="size__a size__a--big" aria-hidden="true">A</span>
+      <output class="size__value"></output>
+    </div>
+
+    <p class="sheet__label" id="theme-label" data-i18n="app.themeLabel">Tema de lectura</p>
+    <div class="reading__themes" role="radiogroup" aria-labelledby="theme-label">
+      <button type="button" role="radio" class="swatch" data-reader-theme="paper" data-reader-option="paper">
+        <span class="swatch__sample" aria-hidden="true">Aa</span>
+        <span data-i18n="app.themePaper">Papel</span>
+      </button>
+      <button type="button" role="radio" class="swatch" data-reader-theme="sepia" data-reader-option="sepia">
+        <span class="swatch__sample" aria-hidden="true">Aa</span>
+        <span data-i18n="app.themeSepia">Sepia</span>
+      </button>
+      <button type="button" role="radio" class="swatch" data-reader-theme="night" data-reader-option="night">
+        <span class="swatch__sample" aria-hidden="true">Aa</span>
+        <span data-i18n="app.themeNight">Nocturno</span>
+      </button>
+      <button type="button" role="radio" class="swatch" data-reader-theme="amoled" data-reader-option="amoled">
+        <span class="swatch__sample" aria-hidden="true">Aa</span>
+        <span data-i18n="app.themeAmoled">AMOLED</span>
+      </button>
+    </div>
+  </dialog>
+
+  <script src="i18n.js?v=2"></script>
+  <script type="module" src="read.js"></script>
+</body>
+</html>
