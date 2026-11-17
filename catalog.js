@@ -74,16 +74,21 @@ function edition(work, lang) {
   return {
     ...work,
     title: work.titles[lang].split(/[;:]\s/)[0],
+    titleLang: lang,
     language: lang,
     original_cover: work.covers?.[lang] ?? work.original_cover,
   };
 }
 
-/* With an edition in the interface language, its card uses that title, language
-   and cover, matching the linked work page. */
+/* Prefer the edition in the UI language (title, badge, cover). If there is
+   only a localized work.titles label, keep the book language on the badge. */
 function inUiLanguage(work) {
   const lang = uiLang().split("-")[0];
-  return work.titles?.[lang] ? edition(work, lang) : work;
+  if (work.covers?.[lang] && work.titles?.[lang]) return edition(work, lang);
+  if (work.titles?.[lang]) {
+    return { ...work, title: work.titles[lang].split(/[;:]\s/)[0], titleLang: lang };
+  }
+  return work;
 }
 
 function render() {

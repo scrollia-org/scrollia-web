@@ -153,11 +153,13 @@ function selectedEdition() {
     ?? preferredEdition();
 }
 
-/* With an edition in the interface language, use its title ("La Odisea");
-   otherwise use the work's canonical title in its original language. */
+/* UI label: work.titles[ui] → edition in the UI language → canonical title.
+   Edition / EPUB titles stay on the language selector and the reader. */
 function displayTitle() {
+  const ui = baseLang(uiLang());
+  if (work.titles?.[ui]) return { text: work.titles[ui], lang: ui };
   const edition = preferredEdition();
-  return edition.language === baseLang(uiLang())
+  return edition.language === ui
     ? { text: edition.title, lang: edition.language }
     : { text: work.title, lang: work.editions[0].language };
 }

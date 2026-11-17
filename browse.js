@@ -76,14 +76,17 @@ function applyUiDefault(lang) {
    the work page shows the full one. */
 const shortTitle = (title) => title.split(/[;:]\s/)[0];
 
-/* /books promotes the edition in the requested language: title, language and
-   cover belong to that edition. Original artwork distinguishes works; the
-   typographic fallback only appears while loading or if the image fails. */
+/* /books promotes the edition in the requested language: language and cover
+   belong to that edition. The card title prefers work.titles in the UI
+   language so a Chinese-only work still reads clearly in Spanish. */
 function toWork(result) {
   const edition = result.editions.find((e) => e.id === result.id) ?? result.editions[0];
+  const ui = preferredUiLang();
+  const label = result.titles?.[ui] ?? result.title;
   return {
     id: result.edition_ids?.[0] ?? result.id,
-    title: shortTitle(result.title),
+    title: shortTitle(label),
+    titleLang: result.titles?.[ui] ? ui : edition.languages[0],
     author: result.authors[0] ? displayName(result.authors[0].name) : "",
     language: edition.languages[0],
     cover: result.formats["image/jpeg"],

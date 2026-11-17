@@ -163,13 +163,15 @@ export function bookCover(work, className, lazy) {
 }
 
 /* Book card: the whole card links to the work page, providing one large target.
-   `work` = { id, title, author, language, cover, originalCover? }. */
+   `work` = { id, title, author, language, cover, originalCover?, titleLang? }.
+   titleLang is the UI label language when it differs from the book language. */
 export function bookCard(work) {
+  const titleLang = work.titleLang || work.language;
   const link = element("a", "book");
   link.href = `book.html?id=${work.id}${work.editionLang ? `&lang=${work.editionLang}` : ""}`;
-  link.append(bookCover(work, "book__cover", true));
+  link.append(bookCover({ ...work, language: titleLang }, "book__cover", true));
   link.append(inLang(element("p", "book__lang", endonym(work.language)), work.language));
-  link.append(inLang(element("h3", "book__title", work.title), work.language));
+  link.append(inLang(element("h3", "book__title", work.title), titleLang));
   if (work.author) {
     const author = element("p", "book__author", authorLabel(work.author));
     link.append(isAnonymous(work.author) ? author : inLang(author, work.language));
