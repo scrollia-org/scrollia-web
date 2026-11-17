@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /read.html
+Disallow: /tools/
+
+# EPUB text lives on the API; the reader page is for humans, not indexing.
+Sitemap: https://scrollia.org/sitemap.xml
