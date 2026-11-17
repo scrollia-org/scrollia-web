@@ -5,7 +5,7 @@
 
 import { API, t, plural, endonym, displayName, element, bookCard } from "./api.js";
 
-const PAGE_SIZE = 20; // Requested with page_size (the API default is 10)
+const PAGE_SIZE = 24; // Multiple of common grid columns (4/6); avoids a short last row looking final
 const DEBOUNCE = 250;
 
 const form = document.querySelector(".browse__filters");
