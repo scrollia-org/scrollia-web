@@ -159,5 +159,33 @@
     "religion": "Religion",
     "romance": "Romance",
     "science": "Sciences"
+  },
+  "privacy": {
+    "docTitle": "Confidentialité — Scrollia",
+    "description": "Politique de confidentialité de Scrollia et de Scrollia pour Android.",
+    "caption": "Confidentialité",
+    "heading": "Politique de confidentialité",
+    "meta": "Scrollia et Scrollia pour Android · En vigueur depuis le 27 octobre 2026",
+    "navLegal": "Mentions légales",
+    "summaryTitle": "Résumé",
+    "summary": "Scrollia n’a ni comptes, ni publicité, ni analytique publicitaire. Nous ne vendons pas de données et ne créons pas de profils de lecteurs. La bibliothèque, la progression et les réglages restent sur votre appareil. L’app et le site utilisent HTTPS pour contacter <strong>api.scrollia.org</strong> pour le catalogue et les téléchargements.",
+    "controllerTitle": "Responsable et contact",
+    "controller": "Cette politique s’applique à Scrollia, à son site et à son application Android. Pour toute question ou demande relative à la confidentialité, écrivez à <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
+    "deviceTitle": "Données qui restent sur votre appareil",
+    "device": "Les livres téléchargés ou importés, la progression de lecture et les préférences sont stockés localement. Scrollia ne les synchronise pas avec un compte et ne les envoie pas à nos serveurs. L’importation utilise le sélecteur de fichiers d’Android ; nous ne demandons pas d’accès général au stockage, aux contacts, à la localisation, à la caméra ou au micro. La sauvegarde automatique d’Android est désactivée pour l’app.",
+    "logsTitle": "Requêtes au catalogue et journaux techniques",
+    "logs1": "Consulter le catalogue, rechercher, charger une couverture ou télécharger un livre envoie une requête à notre serveur. Les journaux techniques habituels peuvent inclure la date, l’adresse IP, l’agent utilisateur et l’URL demandée ; une URL de recherche peut contenir le terme saisi. Nous utilisons ces enregistrements uniquement pour exploiter, sécuriser et diagnostiquer le service, pas pour la publicité ni le profilage.",
+    "logs2": "Les enregistrements restent dans le journal du serveur jusqu’à la rotation automatique selon les limites de stockage du système. Nous n’exposons pas votre historique de recherche aux autres utilisateurs. Vous pouvez demander des informations ou une suppression via le contact ci-dessus ; identifier des entrées historiques précises peut être nécessaire et les demandes peuvent être soumises à des obligations techniques ou légales.",
+    "providersTitle": "Prestataires",
+    "providers1": "<strong>Cloudflare</strong> diffuse et protège les connexions vers scrollia.org et api.scrollia.org et traite des données de connexion telles que l’adresse IP selon sa propre <a href=\"https://www.cloudflare.com/privacypolicy/\" rel=\"noopener\">politique de confidentialité</a>. Nous n’incluons aucun SDK publicitaire ni d’analytique.",
+    "providers2": "<strong>Google Translate</strong> ne reçoit le texte sélectionné que lorsque vous choisissez Traduire et que le navigateur s’ouvre. Nous n’envoyons pas de texte à Google automatiquement. Cet usage est régi par la <a href=\"https://policies.google.com/privacy\" rel=\"noopener\">politique de Google</a>.",
+    "contentTitle": "Contenu et polices",
+    "content": "Les synopsis proviennent de Wikipédia et sont attribués sous CC BY-SA 4.0. Les polices sont fournies avec l’app ou le site ; elles ne sont pas chargées depuis Google Fonts ni d’autres services tiers.",
+    "deletionTitle": "Suppression et sécurité",
+    "deletion": "Vous pouvez supprimer des livres dans l’app. La désinstallation efface sa bibliothèque locale, sa progression et ses réglages ; les fichiers originaux importés ne sont pas modifiés. Il n’existe pas de compte Scrollia à supprimer. Les connexions à nos services utilisent HTTPS.",
+    "childrenTitle": "Mineurs et portée internationale",
+    "children": "Scrollia est une bibliothèque grand public et n’est pas spécialement destinée aux enfants de moins de 13 ans. Nous ne demandons ni âge ni données scolaires. Cloudflare peut traiter des connexions dans d’autres pays ; cette politique s’applique quel que soit votre lieu.",
+    "changesTitle": "Modifications",
+    "changes": "Toute modification sera publiée sur cette page avec une nouvelle date d’entrée en vigueur. La politique n’est pas modifiée via l’app sans version consultable ici."
   }
 }

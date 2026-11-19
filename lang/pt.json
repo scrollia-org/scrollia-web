@@ -159,5 +159,33 @@
     "religion": "Religião",
     "romance": "Romance",
     "science": "Ciência"
+  },
+  "privacy": {
+    "docTitle": "Privacidade — Scrollia",
+    "description": "Política de privacidade do Scrollia e do Scrollia para Android.",
+    "caption": "Privacidade",
+    "heading": "Política de privacidade",
+    "meta": "Scrollia e Scrollia para Android · Em vigor desde 27 de outubro de 2026",
+    "navLegal": "Legal",
+    "summaryTitle": "Resumo",
+    "summary": "O Scrollia não tem contas, anúncios nem analítica publicitária. Não vendemos dados nem criamos perfis de leitores. A biblioteca, o progresso e as definições ficam no seu dispositivo. A app e o site usam HTTPS para contactar <strong>api.scrollia.org</strong> para o catálogo e as transferências.",
+    "controllerTitle": "Responsável e contacto",
+    "controller": "Esta política aplica-se ao Scrollia, ao site e à aplicação Android. Para perguntas ou pedidos de privacidade, escreva para <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
+    "deviceTitle": "Dados que ficam no seu dispositivo",
+    "device": "Os livros transferidos ou importados, o progresso de leitura e as preferências são guardados localmente. O Scrollia não os sincroniza com uma conta nem os envia para os nossos servidores. A importação usa o seletor de ficheiros do Android; não pedimos acesso geral ao armazenamento, contactos, localização, câmara ou microfone. A cópia de segurança automática do Android está desativada para a app.",
+    "logsTitle": "Pedidos ao catálogo e registos técnicos",
+    "logs1": "Consultar o catálogo, pesquisar, carregar uma capa ou transferir um livro envia um pedido ao nosso servidor. Os registos técnicos habituais podem incluir data, endereço IP, agente de utilizador e URL pedida; um URL de pesquisa pode conter o termo escrito. Usamos estes registos apenas para operar, proteger e diagnosticar o serviço, não para publicidade nem perfis.",
+    "logs2": "Os registos permanecem no journal do servidor até à rotação automática pelos limites de armazenamento do sistema. Não expomos o seu histórico de pesquisa a outros utilizadores. Pode pedir informação ou eliminação através do contacto acima; identificar entradas históricas concretas pode ser necessário e os pedidos podem estar sujeitos a obrigações técnicas ou legais.",
+    "providersTitle": "Fornecedores",
+    "providers1": "A <strong>Cloudflare</strong> distribui e protege as ligações a scrollia.org e api.scrollia.org e processa dados de ligação como o endereço IP segundo a sua própria <a href=\"https://www.cloudflare.com/privacypolicy/\" rel=\"noopener\">política de privacidade</a>. Não incluímos SDK publicitários nem de analítica.",
+    "providers2": "O <strong>Google Translate</strong> só recebe o texto selecionado quando escolhe Traduzir e o navegador abre. Não enviamos texto ao Google automaticamente. Esse uso rege-se pela <a href=\"https://policies.google.com/privacy\" rel=\"noopener\">política da Google</a>.",
+    "contentTitle": "Conteúdo e tipos de letra",
+    "content": "As sinopses vêm da Wikipédia e são atribuídas sob CC BY-SA 4.0. Os tipos de letra vêm com a app ou o site; não são carregados a partir do Google Fonts nem de outros serviços de terceiros.",
+    "deletionTitle": "Eliminação e segurança",
+    "deletion": "Pode remover livros na app. Ao desinstalar, o Android apaga a biblioteca local, o progresso e as definições; os ficheiros originais importados não são alterados. Não existe uma conta Scrollia para eliminar. As ligações aos nossos serviços usam HTTPS.",
+    "childrenTitle": "Menores e alcance internacional",
+    "children": "O Scrollia é uma biblioteca de público geral e não se dirige especificamente a menores de 13 anos. Não pedimos idade nem dados escolares. A Cloudflare pode processar ligações noutros países; esta política aplica-se independentemente da sua localização.",
+    "changesTitle": "Alterações",
+    "changes": "Publicaremos quaisquer alterações nesta página com uma nova data de vigência. A política não é alterada pela app sem uma versão que possa consultar aqui."
   }
 }

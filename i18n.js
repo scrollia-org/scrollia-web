@@ -11,8 +11,9 @@ let current = {};
 let currentLang = DEFAULT;
 
 async function loadStrings(lang) {
-  const res = await fetch(`lang/${lang}.json`);
-  if (!res.ok) throw new Error(`i18n: no se pudo cargar lang/${lang}.json`);
+  const base = document.documentElement.dataset.i18nBase || "lang";
+  const res = await fetch(`${base}/${lang}.json`);
+  if (!res.ok) throw new Error(`i18n: no se pudo cargar ${base}/${lang}.json`);
   return res.json();
 }
 
