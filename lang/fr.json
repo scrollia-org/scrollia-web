@@ -92,7 +92,7 @@
     "quoteCite": "— René Descartes, Discours de la méthode"
   },
   "footer": {
-    "built": "Construit sur le corpus du <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a>, avec des éditions de <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>",
+    "built": "Construit sur le corpus du <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a>, avec des éditions de <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> et de <a href=\"https://www.liberliber.it\" rel=\"noopener\">Liber Liber</a>",
     "legal": "Les livres sont dans le domaine public dans leurs juridictions respectives.",
     "privacy": "Confidentialité",
     "faq": "FAQ"
@@ -206,7 +206,7 @@
     "pdTitle": "Qu’est-ce que le domaine public ?",
     "pd": "Une œuvre est dans le domaine public quand le droit d’auteur a expiré (ou n’a jamais existé) et que n’importe qui peut la copier, la traduire ou la partager sans demander. La date n’est pas la même partout: elle dépend du droit local (par exemple, des années après la mort de l’auteur). Donc un livre peut être libre ici et encore protégé ailleurs.",
     "sourceTitle": "D’où viennent les textes ?",
-    "source": "Du corpus de <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> et, s’il existe une édition soignée libre, de <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> et d’autres sources ouvertes. Chez Scrollia on vérifie les textes, on unifie les métadonnées et on traduit si besoin. Chaque fiche dit d’où ça vient; les synopsis viennent souvent de Wikipédia (CC BY-SA 4.0).",
+    "source": "Du corpus de <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> et, s’il existe une édition soignée libre, de <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>, <a href=\"https://www.liberliber.it\" rel=\"noopener\">Liber Liber</a> et d’autres sources ouvertes. Chez Scrollia on vérifie les textes, on unifie les métadonnées et on traduit si besoin. Chaque fiche dit d’où ça vient; les synopsis viennent souvent de Wikipédia (CC BY-SA 4.0).",
     "adsTitle": "Pourquoi ni publicité ni comptes ?",
     "ads": "Ce qui compte pour moi, c’est que chacun puisse lire. J’ai commencé sans comptes, sans publicité et en open source parce que ça me semblait juste: les classiques ne devraient pas être derrière un paywall ni un profil. Des gens ont dit que des comptes ou une communauté seraient super; on pourra ajouter ça plus tard si c’est utile. Scrollia est pour ceux qui l’utilisent: s’ils demandent des changements, on les fait. Je paie le serveur et le travail éditorial; si une page de soutien apparaît un jour, elle sera volontaire et à part.",
     "typoTitle": "Comment signaler une coquille ?",

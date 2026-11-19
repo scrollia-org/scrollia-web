@@ -92,7 +92,7 @@
     "quoteCite": "— Padre António Vieira, Sermão de Nossa Senhora da Penha de França"
   },
   "footer": {
-    "built": "Construído sobre o acervo do <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a>, com edições da <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>",
+    "built": "Construído sobre o acervo do <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a>, com edições da <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> e da <a href=\"https://www.liberliber.it\" rel=\"noopener\">Liber Liber</a>",
     "legal": "Os livros estão em domínio público em suas respectivas jurisdições.",
     "privacy": "Privacidade",
     "faq": "Perguntas frequentes"
@@ -206,7 +206,7 @@
     "pdTitle": "O que é domínio público?",
     "pd": "Uma obra está em domínio público quando os direitos de autor já caducaram (ou nunca existiram) e qualquer pessoa a pode copiar, traduzir ou partilhar sem pedir licença. A data muda conforme o país: depende da lei local (por exemplo, anos após a morte do autor). Por isso um livro pode ser livre num sítio e continuar protegido noutro.",
     "sourceTitle": "De onde vêm os textos?",
-    "source": "Do corpus do <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> e, quando há edição cuidada livre, de <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> e outras fontes abertas. Na Scrollia revemos, unificamos metadados e, se for preciso, traduzimos. Cada ficha diz de onde vem; as sinopses costumam vir da Wikipédia (CC BY-SA 4.0).",
+    "source": "Do corpus do <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> e, quando há edição cuidada livre, de <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>, <a href=\"https://www.liberliber.it\" rel=\"noopener\">Liber Liber</a> e outras fontes abertas. Na Scrollia revemos, unificamos metadados e, se for preciso, traduzimos. Cada ficha diz de onde vem; as sinopses costumam vir da Wikipédia (CC BY-SA 4.0).",
     "adsTitle": "Porque não há anúncios nem contas?",
     "ads": "O que me importa de verdade é que qualquer pessoa possa ler. Comecei sem contas, sem anúncios e em aberto porque me parecia bem: os clássicos não deveriam estar atrás de um paywall nem de um perfil. Há quem tenha dito que contas ou uma comunidade ficariam ótimas; pode acrescentar-se depois se fizer falta. A Scrollia é de quem a usa: se pedirem mudanças, fazem-se. O servidor e o trabalho editorial pago eu; se um dia houver uma página de apoio, será voluntária e à parte.",
     "typoTitle": "Como aviso um erro?",

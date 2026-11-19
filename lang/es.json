@@ -91,7 +91,7 @@
     "quoteCite": "— Miguel de Cervantes, Don Quijote"
   },
   "footer": {
-    "built": "Construido sobre el corpus del <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a>, con ediciones de <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>",
+    "built": "Construido sobre el corpus del <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a>, con ediciones de <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> y <a href=\"https://www.liberliber.it\" rel=\"noopener\">Liber Liber</a>",
     "legal": "Los libros son de dominio público en sus jurisdicciones correspondientes.",
     "privacy": "Privacidad",
     "faq": "Preguntas frecuentes"
@@ -205,7 +205,7 @@
     "pdTitle": "¿Qué es el dominio público?",
     "pd": "Una obra es de dominio público cuando los derechos de autor ya caducaron (o nunca existieron) y cualquiera puede copiarla, traducirla o compartirla sin pedir permiso. La fecha cambia según el país: depende de la ley local (por ejemplo, años desde la muerte del autor). Por eso un libro puede ser libre en un sitio y seguir protegido en otro.",
     "sourceTitle": "¿De dónde salen los textos?",
-    "source": "Del corpus de <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> y, si hay edición cuidada libre, de <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> y otras fuentes abiertas. En Scrollia revisamos, unificamos metadatos y, si hace falta, traducimos. Cada ficha dice de dónde sale; las sinopsis suelen venir de Wikipedia (CC BY-SA 4.0).",
+    "source": "Del corpus de <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> y, si hay edición cuidada libre, de <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>, <a href=\"https://www.liberliber.it\" rel=\"noopener\">Liber Liber</a> y otras fuentes abiertas. En Scrollia revisamos, unificamos metadatos y, si hace falta, traducimos. Cada ficha dice de dónde sale; las sinopsis suelen venir de Wikipedia (CC BY-SA 4.0).",
     "adsTitle": "¿Por qué no hay anuncios ni cuentas?",
     "ads": "Lo que me importa de verdad es que cualquiera pueda leer. Empecé sin cuentas, sin anuncios y en abierto porque me parecía bien: los clásicos no deberían estar detrás de un paywall ni de un perfil. Hay quien ha dicho que cuentas o una comunidad irían genial; se puede añadir después si hace falta. Scrollia es de la gente que la usa: si piden cambios, se hacen. El servidor y el trabajo editorial los pago yo; si algún día hay una página de apoyo, será voluntaria y aparte.",
     "typoTitle": "¿Cómo aviso de una errata?",

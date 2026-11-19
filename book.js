@@ -7,9 +7,19 @@ import {
   readingProgress, readerUrl, FINISHED, displayName, bookCover, authorLabel, isAnonymous,
 } from "./api.js";
 
-const SOURCES = { gutenberg: "Project Gutenberg", standardebooks: "Standard Ebooks" };
+const SOURCES = {
+  gutenberg: "Project Gutenberg",
+  standardebooks: "Standard Ebooks",
+  liberliber: "Liber Liber",
+  manuzio: "Liber Liber",
+};
 /* Scrollia editions (source "scrollia") link to their source text. */
-const HOSTS = { "standardebooks.org": "Standard Ebooks", "www.gutenberg.org": "Project Gutenberg" };
+const HOSTS = {
+  "standardebooks.org": "Standard Ebooks",
+  "www.gutenberg.org": "Project Gutenberg",
+  "liberliber.it": "Liber Liber",
+  "www.liberliber.it": "Liber Liber",
+};
 const LICENSES = { "CC BY-SA 4.0": "https://creativecommons.org/licenses/by-sa/4.0/" };
 
 const main = document.querySelector(".work");

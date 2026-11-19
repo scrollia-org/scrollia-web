@@ -91,7 +91,7 @@
     "quoteCite": "— Dante Alighieri, Inferno XXVI"
   },
   "footer": {
-    "built": "Basata sul corpus di <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a>, con edizioni di <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>",
+    "built": "Basata sul corpus di <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a>, con edizioni di <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> e di <a href=\"https://www.liberliber.it\" rel=\"noopener\">Liber Liber</a>",
     "legal": "I libri sono di pubblico dominio nelle rispettive giurisdizioni.",
     "privacy": "Privacy",
     "faq": "Domande frequenti"
@@ -204,7 +204,7 @@
     "pdTitle": "Cos’è il pubblico dominio?",
     "pd": "Un’opera è di pubblico dominio quando il diritto d’autore è scaduto (o non è mai esistito) e chiunque può copiarla, tradurla o condividerla senza chiedere permesso. La data non è uguale ovunque: dipende dalla legge locale (per esempio gli anni dalla morte dell’autore). Per questo un libro può essere libero in un posto e ancora protetto in un altro.",
     "sourceTitle": "Da dove arrivano i testi?",
-    "source": "Dal corpus di <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> e, se c’è un’edizione curata libera, da <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> e altre fonti aperte. In Scrollia controlliamo i testi, unifichiamo i metadati e, se serve, traduciamo. Ogni scheda dice da dove viene; le sinossi spesso vengono da Wikipedia (CC BY-SA 4.0).",
+    "source": "Dal corpus di <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> e, se c’è un’edizione curata libera, da <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>, <a href=\"https://www.liberliber.it\" rel=\"noopener\">Liber Liber</a> e altre fonti aperte. In Scrollia controlliamo i testi, unifichiamo i metadati e, se serve, traduciamo. Ogni scheda dice da dove viene; le sinossi spesso vengono da Wikipedia (CC BY-SA 4.0).",
     "adsTitle": "Perché non ci sono annunci né account?",
     "ads": "Quello che mi importa davvero è che chiunque possa leggere. Ho iniziato senza account, senza annunci e open source perché mi sembrava giusto: i classici non dovrebbero stare dietro a un paywall né a un profilo. Qualcuno ha detto che account o una comunità andrebbero benissimo; si può aggiungere dopo se serve. Scrollia è di chi la usa: se chiedono cambiamenti, si fanno. Server e lavoro editoriale li pago io; se un giorno ci sarà una pagina di sostegno, sarà volontaria e a parte.",
     "typoTitle": "Come segnalo un refuso?",
