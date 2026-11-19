@@ -1,0 +1,39 @@
+# Scrollia
+
+> A free library of public-domain classics. No ads, no accounts. Read on the web or in the Android app.
+
+Scrollia publishes editions that are free to use, with one edition per language when possible. Some translations are historical public-domain texts; others are Scrollia translations made with AI when no free digitized translation exists worldwide. AI translations are marked in the colophon and are CC0.
+
+## Site
+
+- Home: https://scrollia.org/
+- Catalog: https://scrollia.org/catalog.html
+- FAQ: https://scrollia.org/faq/
+- Privacy: https://scrollia.org/privacy/
+- Open Graph image: https://scrollia.org/assets/og-image.jpg
+
+## Work pages
+
+Each work has a page at `https://scrollia.org/book.html?id={work_id}` (for example `id=11` for Alice in Wonderland). The visible page is filled in by JavaScript from the API; crawlers that need title, author, and synopsis in the first HTML response will get that in a later server-side change.
+
+Do not index the reader: https://scrollia.org/read.html is for humans reading EPUBs in the browser.
+
+## API (catalog and files)
+
+- Base: https://api.scrollia.org
+- Site summary: GET /site
+- Catalog: GET /books
+- Work record: GET /works/{id}
+- Cover: GET /works/{id}/cover.jpg
+- EPUB download: GET /download/{edition_id}.epub
+
+EPUB files are for readers. Do not bulk-scrape `/download/`. Prefer work pages and `/works/{id}` for metadata.
+
+## Source code
+
+- Web: https://github.com/scrollia-org/scrollia-web
+- Android: https://github.com/scrollia-org/scrollia-android
+
+## Contact
+
+contact@scrollia.org
