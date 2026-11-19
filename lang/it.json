@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "description": "Una biblioteca libera dei classici universali. Leggi sul web o nell’app, senza pubblicità, per sempre."
+  },
+  "nav": {
+    "skip": "Salta al contenuto",
+    "label": "Principale",
+    "catalog": "Catalogo",
+    "app": "App",
+    "mission": "Missione",
+    "theme": "Tema",
+    "themeAuto": "Automatico",
+    "themeLight": "Chiaro",
+    "themeDark": "Scuro",
+    "themeAmoled": "AMOLED",
+    "language": "Lingua"
+  },
+  "continue": {
+    "title": "Continua a leggere"
+  },
+  "hero": {
+    "kicker": "Biblioteca di pubblico dominio",
+    "title": "I classici dell’umanità, gratis e per sempre.",
+    "ctaApp": "Scarica l’app",
+    "ctaCatalog": "Inizia a leggere"
+  },
+  "catalog": {
+    "title": "Una biblioteca universale",
+    "count": "{works} in {languages}.",
+    "works": {
+      "one": "{n} opera",
+      "other": "{n} opere"
+    },
+    "languagesMany": "{n} lingue",
+    "loading": "Caricamento del catalogo…",
+    "error": "Non è stato possibile caricare il catalogo in questo momento.",
+    "retry": "Riprova",
+    "all": "Sfoglia tutto il catalogo"
+  },
+  "browse": {
+    "metaTitle": "Catalogo · Scrollia",
+    "search": "Cerca per titolo o autore",
+    "language": "Lingua",
+    "empty": "Nessuna opera corrisponde a “{query}”.",
+    "clear": "Cancella la ricerca",
+    "pages": "Pagine del catalogo",
+    "prev": "Precedente",
+    "next": "Successiva",
+    "page": "Pagina {n}",
+    "pageOf": "pagina {page} di {pages}",
+    "genre": "Genere",
+    "sort": "Ordina per",
+    "sortPopular": "Popolarità",
+    "sortTitle": "Titolo A–Z",
+    "sortAuthor": "Autore A–Z",
+    "allLanguages": "Tutte le lingue",
+    "allGenres": "Tutti i generi"
+  },
+  "feat": {
+    "free": {
+      "title": "Senza pubblicità"
+    },
+    "offline": {
+      "title": "Lettura offline"
+    },
+    "private": {
+      "title": "Senza tracciamento"
+    }
+  },
+  "app": {
+    "kicker": "App Android",
+    "title": "La tua biblioteca, in tasca",
+    "point1": "Scorrimento continuo o a pagine, a te la scelta.",
+    "point2": "Il progresso salvato in ogni libro.",
+    "point3": "Tipografia regolabile e un carattere adatto alla dislessia.",
+    "download": "Scarica APK",
+    "play": "Google Play · a breve",
+    "readerMeta": "Capitolo 1 di 61 · 3%",
+    "themeLabel": "Tema di lettura",
+    "themePaper": "Carta",
+    "themeSepia": "Seppia",
+    "themeNight": "Notturno",
+    "themeAmoled": "AMOLED",
+    "readerChapter": "Inferno · Canto I",
+    "readerText": "Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura, ché la diritta via era smarrita. Ahi quanto a dir qual era è cosa dura esta selva selvaggia e aspra e forte che nel pensier rinnova la paura!"
+  },
+  "mission": {
+    "text": "Crediamo che il patrimonio letterario dell’umanità non debba stare dietro a un paywall. In Scrollia non ci sono muri: chiunque può leggerlo, in qualsiasi lingua.",
+    "contact": "Idee o refusi? <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>",
+    "quote": "“Considerate la vostra semenza: fatti non foste a viver come bruti, ma per seguir virtute e canoscenza.”",
+    "quoteCite": "— Dante Alighieri, Inferno XXVI"
+  },
+  "footer": {
+    "built": "Basata sul corpus di <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a>, con edizioni di <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>",
+    "legal": "I libri sono di pubblico dominio nelle rispettive giurisdizioni.",
+    "privacy": "Privacy"
+  },
+  "work": {
+    "back": "Torna al catalogo",
+    "download": "Scarica EPUB",
+    "edition": "Lingua del libro",
+    "source": "Fonte: {source}",
+    "synopsis": "Sinossi",
+    "synopsisIn": "Sinossi in {language}.",
+    "attribution": "Testo da {source}, con licenza {license}.",
+    "translatedBy": "Traduzione di {names}",
+    "aiTranslation": "Traduzione con IA",
+    "aiUnreviewed": "Traduzione con IA, non ancora rivista da una persona",
+    "aiShort": "IA",
+    "synopsisAi": "Sinossi redatta con IA",
+    "pages": {
+      "one": "{n} pagina",
+      "other": "circa {n} pagine"
+    },
+    "bce": "{n} a.C.",
+    "notFound": "Questa opera non è nel catalogo.",
+    "error": "Non è stato possibile caricare questa opera in questo momento.",
+    "read": "Leggi",
+    "continue": "Continua a leggere · {percent}",
+    "anonymous": "Anonimo",
+    "share": "Condividi",
+    "shareCopied": "Link copiato",
+    "shareCopy": "Copia questo link",
+    "shareText": "«{title}» di {author}, gratis su Scrollia",
+    "shareTextAnonymous": "«{title}», gratis su Scrollia"
+  },
+  "reader": {
+    "back": "Torna alla scheda",
+    "contents": "Indice",
+    "settings": "Impostazioni di lettura",
+    "size": "Dimensione del testo",
+    "close": "Chiudi",
+    "loading": "Apertura del libro…",
+    "error": "Non è stato possibile aprire questo libro in questo momento.",
+    "notFound": "Questo libro non è nel catalogo.",
+    "offline": "Sei offline. I libri che apri vengono salvati per leggerli senza connessione; questo non l’hai ancora aperto.",
+    "previous": "Capitolo precedente",
+    "next": "Capitolo successivo",
+    "note": "Nota",
+    "noteGo": "Vai alla nota"
+  },
+  "genres": {
+    "animal": "Animali",
+    "children": "Bambini",
+    "classics": "Classici",
+    "countries": "Paesi",
+    "crime": "Giallo",
+    "education": "Educazione",
+    "fiction": "Narrativa",
+    "geography": "Geografia",
+    "history": "Storia",
+    "literature": "Letteratura",
+    "law": "Diritto",
+    "music": "Musica",
+    "periodicals": "Periodici",
+    "psychology": "Psicologia",
+    "philosophy": "Filosofia",
+    "religion": "Religione",
+    "romance": "Romanzo",
+    "science": "Scienza"
+  },
+  "privacy": {
+    "docTitle": "Privacy — Scrollia",
+    "description": "Informativa sulla privacy di Scrollia e di Scrollia per Android.",
+    "caption": "Privacy",
+    "heading": "Informativa sulla privacy",
+    "meta": "Scrollia e Scrollia per Android · In vigore dal 27 ottobre 2026",
+    "navLegal": "Legale",
+    "summaryTitle": "In sintesi",
+    "summary": "Scrollia non ha account, pubblicità né analitiche pubblicitarie. Non vendiamo dati né costruiamo profili dei lettori. La biblioteca, i progressi di lettura e le impostazioni restano sul tuo dispositivo. L’app e il sito contattano <strong>api.scrollia.org</strong> via HTTPS per il catalogo e i download.",
+    "controllerTitle": "Titolare e contatti",
+    "controller": "Questa informativa riguarda Scrollia, il suo sito web e la sua app Android. Per domande o richieste sulla privacy, scrivi a <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
+    "deviceTitle": "Dati che restano sul dispositivo",
+    "device": "I libri scaricati o importati, i progressi di lettura e le preferenze sono memorizzati in locale. Scrollia non li sincronizza con un account né li invia ai nostri server. L’importazione usa il selettore di file di Android; non chiediamo accesso generico a memoria, contatti, posizione, fotocamera o microfono. Il backup automatico di Android è disattivato per l’app.",
+    "logsTitle": "Richieste al catalogo e log tecnici",
+    "logs1": "Consultare il catalogo, cercare, caricare una copertina o scaricare un libro invia una richiesta al nostro server. I log tecnici abituali possono includere data, indirizzo IP, user agent e URL richiesto; un URL di ricerca può contenere il termine digitato. Usiamo questi registri solo per operare, proteggere e diagnosticare il servizio, non per pubblicità né profilazione.",
+    "logs2": "I registri restano nel journal del server fino alla rotazione automatica secondo i limiti di archiviazione del sistema. Non esponiamo la tua cronologia di ricerca ad altri utenti. Puoi chiedere informazioni o cancellazione tramite il contatto indicato; identificare voci storiche specifiche può essere necessario e le richieste possono essere soggette a obblighi tecnici o legali.",
+    "providersTitle": "Fornitori",
+    "providers1": "<strong>Cloudflare</strong> distribuisce e protegge le connessioni a scrollia.org e api.scrollia.org e tratta dati di connessione come l’indirizzo IP secondo la propria <a href=\"https://www.cloudflare.com/privacypolicy/\" rel=\"noopener\">informativa sulla privacy</a>. Non includiamo SDK pubblicitari né di analitiche.",
+    "providers2": "<strong>Google Translate</strong> riceve il testo selezionato solo quando scegli Traduci e si apre il browser. Non inviamo testo a Google automaticamente. Quell’uso è regolato dalla <a href=\"https://policies.google.com/privacy\" rel=\"noopener\">politica di Google</a>.",
+    "contentTitle": "Contenuti e font",
+    "content": "Le sinossi provengono da Wikipedia e sono attribuite con licenza CC BY-SA 4.0. I font sono distribuiti con l’app o il sito; non vengono caricati da Google Fonts né da altri servizi di terzi.",
+    "deletionTitle": "Cancellazione e sicurezza",
+    "deletion": "Puoi eliminare i libri dall’app. Disinstallandola, Android cancella la biblioteca locale, i progressi e le impostazioni; i file originali che hai importato non vengono modificati. Non esiste un account Scrollia da eliminare. Le connessioni ai nostri servizi usano HTTPS.",
+    "childrenTitle": "Minori e uso internazionale",
+    "children": "Scrollia è una biblioteca per un pubblico generale e non è rivolta in modo specifico ai minori di 13 anni. Non chiediamo età né dati scolastici. Cloudflare può trattare connessioni in altri Paesi; questa informativa vale ovunque tu ti trovi.",
+    "changesTitle": "Modifiche",
+    "changes": "Pubblicheremo eventuali modifiche in questa pagina con una nuova data di efficacia. L’informativa non viene cambiata tramite l’app senza una versione che puoi consultare qui."
+  }
+}
