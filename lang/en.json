@@ -194,12 +194,20 @@
     "caption": "Help",
     "heading": "Frequently asked questions",
     "navLabel": "Help",
-    "intro": "Short answers about translations, copyright, and languages. If yours is missing, email <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
+    "intro": "Short answers about the public domain, translations, copyright, and languages. If yours is missing, email <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
     "aiTitle": "Why are there AI translations when others already exist?",
     "ai": "We only translate with AI when there is no digitized public-domain historical translation, or when an existing one is still under copyright in many countries. For example, for <em>Alice</em>, Gutiérrez Gili’s Spanish version (1927) is not digitized anywhere, and Lobato’s Portuguese version is still protected in the U.S. AI prepares a draft; then comes editorial and human review. That translation is CC0 (you may copy and improve it without asking), it is always noted in the colophon, and when a free historical edition appears we offer that too.",
     "langTitle": "Why don’t I see book X in my language?",
     "lang": "Editions in each language are added gradually: first we need a free source or a reviewed translation. We could dump a whole book through an automatic translator (for example Google), but for many classics the quality is not good enough. If enough people ask for a title or a language, we will prioritize it.",
     "placeTitle": "Why isn’t book X available where I live?",
-    "place": "Most often, from the country you are connecting from, that work is not yet free to use. Scrollia only publishes what is free worldwide: if the book is still under copyright in your country (or another), we do not offer it. It may also be that we have not onboarded it yet—in that case, write to us."
+    "place": "Most often, from the country you are connecting from, that work is not yet free to use. Scrollia only publishes what is free worldwide: if the book is still under copyright in your country (or another), we do not offer it. It may also be that we have not onboarded it yet—in that case, write to us.",
+    "pdTitle": "What is the public domain?",
+    "pd": "A work is in the public domain when copyright has expired (or never applied) and anyone may copy, translate, or share it without asking permission. The date is not the same in every country: it depends on local law (for example, years after the author’s death). That is why a book can be free in one place and still protected in another.",
+    "sourceTitle": "Where do the texts come from?",
+    "source": "From the <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> corpus and, when a careful free edition exists, from <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> and other open sources. At Scrollia we review, unify metadata, and translate when needed. Each work page cites its source; synopses often come from Wikipedia (CC BY-SA 4.0).",
+    "adsTitle": "Why are there no ads or accounts?",
+    "ads": "Because literary heritage should not sit behind a paywall or a profile. Without accounts there is no cloud sync and no data to sell; without ads there is no incentive to track you. Your library, progress, and settings stay on your device. Server and editorial costs are borne by the project; if a support page appears someday, it will be voluntary and separate.",
+    "typoTitle": "How do I report a typo?",
+    "typo": "Email <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a> with the title, language, and if you can, the chapter or a short quote. For now it is by email; later there will be an easier way from the reader itself."
   }
 }

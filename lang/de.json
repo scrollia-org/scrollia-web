@@ -194,12 +194,20 @@
     "caption": "Hilfe",
     "heading": "Häufige Fragen",
     "navLabel": "Hilfe",
-    "intro": "Kurze Antworten zu Übersetzungen, Urheberrecht und Sprachen. Fehlt deine Frage, schreib an <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
+    "intro": "Kurze Antworten zu Gemeinfreiheit, Übersetzungen, Urheberrecht und Sprachen. Fehlt deine Frage, schreib an <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
     "aiTitle": "Warum gibt es KI-Übersetzungen, wenn schon andere existieren?",
     "ai": "Wir übersetzen nur mit KI, wenn es keine digitalisierte gemeinfreie historische Übersetzung gibt oder eine vorhandene in vielen Ländern noch urheberrechtlich geschützt ist. Bei <em>Alice</em> etwa ist Gutiérrez Gilis spanische Fassung (1927) nirgends digitalisiert, und Lobatos portugiesische Fassung ist in den USA noch geschützt. Die KI erstellt einen Entwurf; danach folgt redaktionelle und menschliche Prüfung. Diese Übersetzung ist CC0 (kopieren und verbessern ohne Nachfrage), steht immer im Kolophon und wird ergänzt, sobald eine freie historische Ausgabe vorliegt.",
     "langTitle": "Warum sehe ich Buch X nicht in meiner Sprache?",
     "lang": "Ausgaben in jeder Sprache kommen nach und nach: zuerst braucht es eine freie Quelle oder eine geprüfte Übersetzung. Wir könnten ein ganzes Buch durch einen automatischen Übersetzer (etwa Google) jagen, aber bei vielen Klassikern reicht die Qualität nicht. Kommen genug Anfragen zu einem Titel oder einer Sprache, priorisieren wir sie.",
     "placeTitle": "Warum ist Buch X dort, wo ich lebe, nicht verfügbar?",
-    "place": "Am häufigsten ist das Werk vom Land aus, von dem du dich verbindest, noch nicht frei nutzbar. Scrollia veröffentlicht nur, was weltweit frei ist: steht das Buch in deinem Land (oder einem anderen) noch unter Schutz, bieten wir es nicht an. Es kann auch sein, dass wir es noch nicht aufgenommen haben — dann schreib uns."
+    "place": "Am häufigsten ist das Werk vom Land aus, von dem du dich verbindest, noch nicht frei nutzbar. Scrollia veröffentlicht nur, was weltweit frei ist: steht das Buch in deinem Land (oder einem anderen) noch unter Schutz, bieten wir es nicht an. Es kann auch sein, dass wir es noch nicht aufgenommen haben — dann schreib uns.",
+    "pdTitle": "Was ist gemeinfrei / public domain?",
+    "pd": "Ein Werk ist gemeinfrei, wenn das Urheberrecht abgelaufen ist (oder nie galt) und jede:r es ohne Nachfrage kopieren, übersetzen oder teilen darf. Das Datum ist nicht überall gleich: es hängt vom lokalen Recht ab (zum Beispiel Jahre nach dem Tod der Autorin oder des Autors). Deshalb kann ein Buch hier frei und woanders noch geschützt sein.",
+    "sourceTitle": "Woher kommen die Texte?",
+    "source": "Aus dem Corpus von <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> und, wenn eine sorgfältige freie Ausgabe existiert, von <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> und anderen offenen Quellen. Bei Scrollia prüfen wir, vereinheitlichen Metadaten und übersetzen bei Bedarf. Jede Werkseite nennt die Herkunft; Synopsen stammen oft aus Wikipedia (CC BY-SA 4.0).",
+    "adsTitle": "Warum keine Werbung und keine Konten?",
+    "ads": "Weil literarisches Erbe nicht hinter einer Bezahlschranke oder einem Profil stehen sollte. Ohne Konten kein Cloud-Sync und keine Daten zum Verkauf; ohne Werbung kein Anreiz, dich zu tracken. Bibliothek, Fortschritt und Einstellungen bleiben auf deinem Gerät. Server und Redaktion trägt das Projekt; falls es irgendwann eine Unterstützungsseite gibt, ist sie freiwillig und getrennt.",
+    "typoTitle": "Wie melde ich einen Fehler?",
+    "typo": "Schreib an <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a> mit Titel, Sprache und möglichst Kapitel oder einem kurzen Zitat. Vorerst per E-Mail; später gibt es einen bequemeren Weg aus dem Leser heraus."
   }
 }
