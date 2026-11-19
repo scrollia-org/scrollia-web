@@ -196,12 +196,20 @@
     "caption": "Ajuda",
     "heading": "Perguntas frequentes",
     "navLabel": "Ajuda",
-    "intro": "Respostas curtas sobre traduções, direitos de autor e idiomas. Se faltar a tua, escreve para <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
+    "intro": "Respostas curtas sobre domínio público, traduções, direitos de autor e idiomas. Se faltar a tua, escreve para <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
     "aiTitle": "Porque há traduções com IA se já existem outras?",
     "ai": "Só traduzimos com IA quando não há uma tradução histórica de domínio público digitalizada, ou quando a que existe continua protegida por direitos de autor em muitos países. Em <em>Alice</em>, por exemplo, a espanhola de Gutiérrez Gili (1927) não está digitalizada em lado nenhum, e a portuguesa de Lobato continua protegida nos EUA. A IA prepara um rascunho; depois há revisão editorial e humana. Essa tradução é CC0 (pode copiar-se e melhorar-se sem pedir licença), indica-se sempre no colofão, e quando surge uma histórica livre também a oferecemos.",
     "langTitle": "Porque não vejo o livro X no meu idioma?",
     "lang": "As edições em cada língua entram aos poucos: primeiro é precisa uma fonte livre ou uma tradução revista. Poderíamos passar um livro inteiro por um tradutor automático (por exemplo Google), mas em muitos clássicos a qualidade não chega. Se houver pedidos suficientes de um título ou idioma, daremos prioridade.",
     "placeTitle": "Porque o livro X não está disponível onde vivo?",
-    "place": "O mais provável é que, no país de onde te ligas, essa obra ainda não seja de uso livre. A Scrollia só publica o que é livre em todo o mundo: se o livro ainda tem direitos no teu país (ou noutro), não o oferecemos. Também pode ser que ainda não o tenhamos incorporado; nesse caso, escreve-nos."
+    "place": "O mais provável é que, no país de onde te ligas, essa obra ainda não seja de uso livre. A Scrollia só publica o que é livre em todo o mundo: se o livro ainda tem direitos no teu país (ou noutro), não o oferecemos. Também pode ser que ainda não o tenhamos incorporado; nesse caso, escreve-nos.",
+    "pdTitle": "O que é domínio público?",
+    "pd": "Uma obra está em domínio público quando os direitos de autor caducaram (ou nunca existiram) e qualquer pessoa a pode copiar, traduzir ou partilhar sem pedir licença. A data não é a mesma em todos os países: depende da lei local (por exemplo, anos após a morte do autor). Por isso um livro pode ser livre num sítio e continuar protegido noutro.",
+    "sourceTitle": "De onde vêm os textos?",
+    "source": "Do corpus do <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> e, quando há edição cuidada livre, de <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> e outras fontes abertas. Na Scrollia revemos, unificamos metadados e, se for preciso, traduzimos. Cada ficha indica a origem; as sinopses costumam vir da Wikipédia (CC BY-SA 4.0).",
+    "adsTitle": "Porque não há anúncios nem contas?",
+    "ads": "Porque o património literário não deveria estar atrás de um paywall nem de um perfil. Sem contas não há sincronização na nuvem nem dados para vender; sem anúncios não há incentivo para te rastrear. A biblioteca, o progresso e as definições ficam no teu dispositivo. O servidor e o trabalho editorial ficam a cargo do projeto; se um dia houver uma página de apoio, será voluntária e à parte.",
+    "typoTitle": "Como aviso um erro?",
+    "typo": "Escreve para <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a> com o título, o idioma e, se puderes, o capítulo ou um trecho. Por agora é por e-mail; mais tarde haverá uma forma mais cómoda a partir da leitura."
   }
 }
