@@ -8,8 +8,11 @@
     "catalog": "书目",
     "app": "应用",
     "mission": "使命",
-    "themeToDark": "切换到深色主题",
-    "themeToLight": "切换到浅色主题",
+    "theme": "主题",
+    "themeAuto": "自动",
+    "themeLight": "浅色",
+    "themeDark": "深色",
+    "themeAmoled": "AMOLED",
     "language": "语言"
   },
   "continue": {
@@ -153,5 +156,33 @@
     "religion": "宗教",
     "romance": "爱情",
     "science": "科学"
+  },
+  "privacy": {
+    "docTitle": "隐私 — Scrollia",
+    "description": "Scrollia 与 Android 版 Scrollia 的隐私政策。",
+    "caption": "隐私",
+    "heading": "隐私政策",
+    "meta": "Scrollia 与 Android 版 Scrollia · 自 2026 年 10 月 27 日起生效",
+    "navLegal": "法律信息",
+    "summaryTitle": "概要",
+    "summary": "Scrollia 没有账户、广告或广告分析。我们不出售数据，也不建立读者画像。书库、阅读进度和设置保存在您的设备上。应用与网站通过 HTTPS 访问 <strong>api.scrollia.org</strong>，以获取目录与下载。",
+    "controllerTitle": "责任方与联系方式",
+    "controller": "本政策适用于 Scrollia、其网站及其 Android 应用。如有隐私相关问题或请求，请发送邮件至 <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>。",
+    "deviceTitle": "留在设备上的数据",
+    "device": "已下载或导入的图书、阅读进度与偏好均本地存储。Scrollia 不会将其同步到账户，也不会发送到我们的服务器。导入使用 Android 的文件选择器；我们不请求通用存储、通讯录、位置、相机或麦克风权限。应用已禁用 Android 自动备份。",
+    "logsTitle": "目录请求与技术日志",
+    "logs1": "浏览目录、搜索、加载封面或下载图书会向我们的服务器发送请求。常规技术日志可能包含时间、IP 地址、用户代理与请求的 URL；搜索 URL 可能包含您输入的词。我们仅将这些记录用于运营、保护与排查服务，不用于广告或画像。",
+    "logs2": "记录保存在服务器日志中，直至按系统存储限制自动轮换。我们不会向其他用户展示您的搜索历史。您可通过上述联系方式请求查询或删除；识别特定历史条目可能是必要的，且请求可能受技术或法律义务约束。",
+    "providersTitle": "服务提供商",
+    "providers1": "<strong>Cloudflare</strong> 分发并保护通往 scrollia.org 与 api.scrollia.org 的连接，并按其自身<a href=\"https://www.cloudflare.com/privacypolicy/\" rel=\"noopener\">隐私政策</a>处理 IP 等连接数据。我们不包含广告或分析 SDK。",
+    "providers2": "仅当您选择“翻译”并打开浏览器时，<strong>Google 翻译</strong>才会收到所选文本。我们不会自动向 Google 发送文本。该使用受 <a href=\"https://policies.google.com/privacy\" rel=\"noopener\">Google 政策</a>约束。",
+    "contentTitle": "内容与字体",
+    "content": "简介来自维基百科，并按 CC BY-SA 4.0 署名。字体随应用或网站分发；不会从 Google Fonts 或其他第三方字体服务加载。",
+    "deletionTitle": "删除与安全",
+    "deletion": "您可在应用中删除图书。卸载后，Android 会删除其本地书库、进度与设置；您导入的原始文件不会被修改。没有可删除的 Scrollia 账户。与我们服务的连接使用 HTTPS。",
+    "childrenTitle": "未成年人与国际范围",
+    "children": "Scrollia 是面向普通读者的图书馆，并非专门面向 13 岁以下儿童。我们不索取年龄或学校数据。Cloudflare 可能在其他国家处理连接；无论您身处何处，本政策均适用。",
+    "changesTitle": "变更",
+    "changes": "任何变更将在本页发布并附上新的生效日期。未经可在此查阅的版本，不会仅通过应用更改本政策。"
   }
 }

@@ -148,6 +148,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .nav__lang:focus-visible, .work__select:focus-visible { outline: 2px solid var(--library); outline-offset: 2px; }
 .work__select { color: var(--ink); }
 
+.theme-picker { position: relative; }
+
 .nav__theme {
   display: grid;
   place-items: center;
@@ -161,11 +163,72 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   transition: color var(--motion-duration) var(--motion-easing),
               border-color var(--motion-duration) var(--motion-easing);
 }
-.nav__theme:hover { color: var(--ink); border-color: var(--ink-soft); }
+.nav__theme:hover,
+.nav__theme[aria-expanded="true"] { color: var(--ink); border-color: var(--ink-soft); }
+.nav__theme:focus-visible { outline: 2px solid var(--library); outline-offset: 2px; }
 
-.icon--sun { display: none; }
-:is([data-theme="dark"], [data-theme="amoled"]) .icon--sun { display: block; }
-:is([data-theme="dark"], [data-theme="amoled"]) .icon--moon { display: none; }
+.icon__fill { fill: currentColor; stroke: none; }
+
+/* Button icon shows the preference, not only the resolved surface. */
+.icon--auto,
+.icon--sun,
+.icon--moon,
+.icon--amoled { display: none; }
+[data-theme-pref="auto"] .icon--auto { display: block; }
+[data-theme-pref="light"] .icon--sun { display: block; }
+[data-theme-pref="dark"] .icon--moon { display: block; }
+[data-theme-pref="amoled"] .icon--amoled { display: block; }
+
+.theme-menu {
+  position: absolute;
+  inset-inline-end: 0;
+  top: calc(100% + var(--space-xs));
+  z-index: 40;
+  min-inline-size: 11.5rem;
+  padding: var(--space-xs);
+  background: var(--paper-raised);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.theme-menu__option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: var(--text-small);
+  text-align: start;
+  cursor: pointer;
+  transition: background-color var(--motion-duration) var(--motion-easing);
+}
+.theme-menu__option:hover { background: color-mix(in srgb, var(--ink) 6%, transparent); }
+.theme-menu__option:focus-visible { outline: 2px solid var(--library); outline-offset: -2px; }
+.theme-menu__option[aria-selected="true"] {
+  background: color-mix(in srgb, var(--library) 12%, transparent);
+  color: var(--library);
+  font-weight: 500;
+}
+
+.theme-menu__swatch {
+  flex: none;
+  inline-size: 1.125rem;
+  block-size: 1.125rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.theme-menu__swatch--auto {
+  background: linear-gradient(90deg, #FAF7F0 50%, #161815 50%);
+}
+.theme-menu__swatch--light { background: #FAF7F0; }
+.theme-menu__swatch--dark { background: #161815; }
+.theme-menu__swatch--amoled { background: #000000; border-color: #35382E; }
 
 /* ---------- continue reading ---------- */
 
@@ -1500,7 +1563,7 @@ html:has(.reading) { scroll-behavior: auto; }
 
 /* 44px targets: comfortable touch areas without enlarging the icons themselves. */
 @media (pointer: coarse) {
-  .nav__lang, .work__select, .nav__theme, .reading__icon, .browse__picker, .swatch, .browse__search { min-block-size: 44px; }
+  .nav__lang, .work__select, .nav__theme, .theme-menu__option, .reading__icon, .browse__picker, .swatch, .browse__search { min-block-size: 44px; }
   .pager__page, .pager__step { min-block-size: 44px; min-inline-size: 44px; }
   .nav__theme, .reading__icon { inline-size: 44px; }
   .nav__links a {

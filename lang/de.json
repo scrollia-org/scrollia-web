@@ -8,8 +8,11 @@
     "catalog": "Katalog",
     "app": "App",
     "mission": "Mission",
-    "themeToDark": "Zum dunklen Design wechseln",
-    "themeToLight": "Zum hellen Design wechseln",
+    "theme": "Design",
+    "themeAuto": "Automatisch",
+    "themeLight": "Hell",
+    "themeDark": "Dunkel",
+    "themeAmoled": "AMOLED",
     "language": "Sprache"
   },
   "continue": {
@@ -155,5 +158,33 @@
     "religion": "Religion",
     "romance": "Liebesroman",
     "science": "Wissenschaft"
+  },
+  "privacy": {
+    "docTitle": "Datenschutz — Scrollia",
+    "description": "Datenschutzerklärung für Scrollia und Scrollia für Android.",
+    "caption": "Datenschutz",
+    "heading": "Datenschutzerklärung",
+    "meta": "Scrollia und Scrollia für Android · Gültig ab 27. Oktober 2026",
+    "navLegal": "Rechtliches",
+    "summaryTitle": "Überblick",
+    "summary": "Scrollia hat keine Konten, keine Werbung und keine Werbeanalyse. Wir verkaufen keine Daten und erstellen keine Leserprofile. Bibliothek, Lesefortschritt und Einstellungen bleiben auf Ihrem Gerät. App und Website nutzen HTTPS, um <strong>api.scrollia.org</strong> für Katalog und Downloads zu erreichen.",
+    "controllerTitle": "Verantwortliche und Kontakt",
+    "controller": "Diese Erklärung gilt für Scrollia, die Website und die Android-App. Bei Datenschutzfragen oder -anfragen schreiben Sie an <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
+    "deviceTitle": "Daten auf Ihrem Gerät",
+    "device": "Heruntergeladene oder importierte Bücher, Lesefortschritt und Einstellungen werden lokal gespeichert. Scrollia synchronisiert sie nicht mit einem Konto und sendet sie nicht an unsere Server. Der Import nutzt Androids Dateiauswahl; wir verlangen keinen allgemeinen Speicher-, Kontakt-, Standort-, Kamera- oder Mikrofonzugriff. Die automatische Android-Sicherung ist für die App deaktiviert.",
+    "logsTitle": "Kataloganfragen und technische Protokolle",
+    "logs1": "Katalogaufrufe, Suche, Laden eines Covers oder Buchdownloads senden eine Anfrage an unseren Server. Übliche technische Protokolle können Datum, IP-Adresse, User-Agent und angeforderte URL enthalten; eine Such-URL kann Ihren Suchbegriff enthalten. Wir nutzen diese Aufzeichnungen nur zum Betrieb, Schutz und zur Diagnose des Dienstes, nicht für Werbung oder Profilerstellung.",
+    "logs2": "Aufzeichnungen bleiben im Serverjournal bis zur automatischen Rotation nach Systemspeichergrenzen. Wir stellen Ihren Suchverlauf anderen Nutzern nicht zur Verfügung. Sie können Auskunft oder Löschung über den obigen Kontakt verlangen; die Identifikation bestimmter historischer Einträge kann nötig sein und Anfragen können technischen oder rechtlichen Pflichten unterliegen.",
+    "providersTitle": "Dienstleister",
+    "providers1": "<strong>Cloudflare</strong> liefert und schützt Verbindungen zu scrollia.org und api.scrollia.org und verarbeitet Verbindungsdaten wie IP-Adressen gemäß der eigenen <a href=\"https://www.cloudflare.com/privacypolicy/\" rel=\"noopener\">Datenschutzerklärung</a>. Wir binden keine Werbe- oder Analyse-SDKs ein.",
+    "providers2": "<strong>Google Translate</strong> erhält ausgewählten Text nur, wenn Sie Übersetzen wählen und der Browser geöffnet wird. Wir senden Text nicht automatisch an Google. Diese Nutzung unterliegt der <a href=\"https://policies.google.com/privacy\" rel=\"noopener\">Google-Richtlinie</a>.",
+    "contentTitle": "Inhalte und Schriften",
+    "content": "Zusammenfassungen stammen von Wikipedia und werden unter CC BY-SA 4.0 angegeben. Schriften liegen der App oder Website bei; sie werden nicht von Google Fonts oder anderen Drittanbietern geladen.",
+    "deletionTitle": "Löschung und Sicherheit",
+    "deletion": "Bücher können Sie in der App entfernen. Bei Deinstallation löscht Android die lokale Bibliothek, den Fortschritt und die Einstellungen; original importierte Dateien bleiben unverändert. Es gibt kein Scrollia-Konto zum Löschen. Verbindungen zu unseren Diensten nutzen HTTPS.",
+    "childrenTitle": "Minderjährige und internationale Nutzung",
+    "children": "Scrollia ist eine Bibliothek für ein allgemeines Publikum und richtet sich nicht speziell an Kinder unter 13 Jahren. Wir erfragen weder Alter noch Schuldaten. Cloudflare kann Verbindungen in anderen Ländern verarbeiten; diese Erklärung gilt unabhängig von Ihrem Standort.",
+    "changesTitle": "Änderungen",
+    "changes": "Änderungen veröffentlichen wir auf dieser Seite mit neuem Gültigkeitsdatum. Die Richtlinie wird nicht über die App geändert, ohne dass Sie sie hier lesen können."
   }
 }

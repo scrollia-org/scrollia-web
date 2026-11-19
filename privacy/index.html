@@ -1,107 +1,114 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-i18n-base="../lang" data-i18n-title="privacy.docTitle" data-i18n-description="privacy.description">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacidad · Privacy — Scrollia</title>
+  <title>Privacidad — Scrollia</title>
   <meta name="description" content="Política de privacidad de Scrollia y Scrollia para Android.">
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
   <script>
     (function () {
-      var theme;
-      try { theme = localStorage.getItem("scrollia-theme"); } catch (_) {}
-      if (theme !== "light" && theme !== "dark" && theme !== "amoled") {
-        theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      var pref;
+      try { pref = localStorage.getItem("scrollia-theme"); } catch (_) {}
+      if (pref !== "light" && pref !== "dark" && pref !== "amoled" && pref !== "auto") {
+        pref = "auto";
       }
-      document.documentElement.dataset.theme = theme;
+      var theme = pref === "auto"
+        ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+        : pref;
+      var root = document.documentElement;
+      root.dataset.themePref = pref;
+      root.dataset.theme = theme;
     })();
   </script>
   <link rel="stylesheet" href="../fonts.css">
   <link rel="stylesheet" href="../tokens.css?v=2">
-  <link rel="stylesheet" href="../styles.css?v=14">
+  <link rel="stylesheet" href="../styles.css?v=15">
 </head>
 <body>
-  <a class="skip-link" href="#contenido">Saltar al contenido · Skip to content</a>
+  <a class="skip-link" href="#contenido" data-i18n="nav.skip">Saltar al contenido</a>
   <header class="nav">
     <a class="nav__logo" href="../" aria-label="Scrollia">
       <img src="../assets/icons/favicon.svg" alt="" width="32" height="32">
       <span aria-hidden="true">crollia</span>
     </a>
-    <nav class="nav__links" aria-label="Legal">
-      <a href="../catalog.html">Catálogo · Catalog</a>
+    <nav class="nav__links" aria-label="Legal" data-i18n-aria="privacy.navLegal">
+      <a href="../catalog.html" data-i18n="nav.catalog">Catálogo</a>
     </nav>
+    <div class="nav__tools">
+      <select class="nav__lang" aria-label="Idioma" data-i18n-aria="nav.language">
+        <option value="es" lang="es">Español</option>
+        <option value="en" lang="en">English</option>
+        <option value="fr" lang="fr">Français</option>
+        <option value="de" lang="de">Deutsch</option>
+        <option value="pt" lang="pt">Português</option>
+        <option value="zh" lang="zh-Hans">中文</option>
+      </select>
+      <div class="theme-picker">
+        <button type="button" class="nav__theme" aria-label="Tema" data-i18n-aria="nav.theme"
+          aria-haspopup="listbox" aria-expanded="false" aria-controls="theme-menu">
+          <svg class="icon icon--auto" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.25"/><path class="icon__fill" d="M12 4.75a7.25 7.25 0 0 0 0 14.5z"/></svg>
+          <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.75v2M12 19.25v2M4.75 12h-2M21.25 12h-2M6.9 6.9 5.5 5.5M18.5 18.5l-1.4-1.4M6.9 17.1l-1.4 1.4M18.5 5.5l-1.4 1.4"/></svg>
+          <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+          <svg class="icon icon--amoled" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.25"/><circle class="icon__fill" cx="12" cy="12" r="4.5"/></svg>
+        </button>
+        <div class="theme-menu" id="theme-menu" role="listbox" hidden>
+          <button type="button" class="theme-menu__option" role="option" data-theme-option="auto" aria-selected="false">
+            <span class="theme-menu__swatch theme-menu__swatch--auto" aria-hidden="true"></span>
+            <span data-i18n="nav.themeAuto">Automático</span>
+          </button>
+          <button type="button" class="theme-menu__option" role="option" data-theme-option="light" aria-selected="false">
+            <span class="theme-menu__swatch theme-menu__swatch--light" aria-hidden="true"></span>
+            <span data-i18n="nav.themeLight">Claro</span>
+          </button>
+          <button type="button" class="theme-menu__option" role="option" data-theme-option="dark" aria-selected="false">
+            <span class="theme-menu__swatch theme-menu__swatch--dark" aria-hidden="true"></span>
+            <span data-i18n="nav.themeDark">Oscuro</span>
+          </button>
+          <button type="button" class="theme-menu__option" role="option" data-theme-option="amoled" aria-selected="false">
+            <span class="theme-menu__swatch theme-menu__swatch--amoled" aria-hidden="true"></span>
+            <span data-i18n="nav.themeAmoled">AMOLED</span>
+          </button>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main id="contenido" class="section legal">
-    <p class="caption">Privacidad · Privacy</p>
-    <h1>Política de privacidad</h1>
-    <p class="legal__meta">Scrollia y Scrollia para Android · Vigente desde el 27 de octubre de 2026</p>
+    <p class="caption" data-i18n="privacy.caption">Privacidad</p>
+    <h1 data-i18n="privacy.heading">Política de privacidad</h1>
+    <p class="legal__meta" data-i18n="privacy.meta">Scrollia y Scrollia para Android · Vigente desde el 27 de octubre de 2026</p>
 
-    <section lang="es">
-      <h2>Resumen</h2>
-      <p>Scrollia no tiene cuentas, anuncios ni analítica publicitaria. No vendemos datos ni creamos perfiles de lectores. La biblioteca, el progreso y los ajustes se guardan en tu dispositivo. Para ofrecer el catálogo y las descargas, la app y la web se comunican con <strong>api.scrollia.org</strong> mediante HTTPS.</p>
+    <section>
+      <h2 data-i18n="privacy.summaryTitle">Resumen</h2>
+      <p data-i18n="privacy.summary">Scrollia no tiene cuentas, anuncios ni analítica publicitaria. No vendemos datos ni creamos perfiles de lectores. La biblioteca, el progreso y los ajustes se guardan en tu dispositivo. Para ofrecer el catálogo y las descargas, la app y la web se comunican con <strong>api.scrollia.org</strong> mediante HTTPS.</p>
 
-      <h2>Responsable y contacto</h2>
-      <p>Esta política se aplica a Scrollia, su sitio web y su aplicación Android. Para preguntas o solicitudes de privacidad, escribe a <a href="mailto:contact@scrollia.org">contact@scrollia.org</a>.</p>
+      <h2 data-i18n="privacy.controllerTitle">Responsable y contacto</h2>
+      <p data-i18n="privacy.controller">Esta política se aplica a Scrollia, su sitio web y su aplicación Android. Para preguntas o solicitudes de privacidad, escribe a <a href="mailto:contact@scrollia.org">contact@scrollia.org</a>.</p>
 
-      <h2>Datos que permanecen en tu dispositivo</h2>
-      <p>Los libros descargados o importados, el progreso de lectura y las preferencias se almacenan localmente. Scrollia no los sincroniza con una cuenta ni los envía a nuestros servidores. La importación usa el selector de archivos de Android; no pedimos acceso general al almacenamiento, contactos, ubicación, cámara o micrófono. La app no activa la copia de seguridad automática de Android.</p>
+      <h2 data-i18n="privacy.deviceTitle">Datos que permanecen en tu dispositivo</h2>
+      <p data-i18n="privacy.device">Los libros descargados o importados, el progreso de lectura y las preferencias se almacenan localmente. Scrollia no los sincroniza con una cuenta ni los envía a nuestros servidores. La importación usa el selector de archivos de Android; no pedimos acceso general al almacenamiento, contactos, ubicación, cámara o micrófono. La app no activa la copia de seguridad automática de Android.</p>
 
-      <h2>Solicitudes al catálogo y registros técnicos</h2>
-      <p>Al consultar el catálogo, buscar una obra, ver una portada o descargar un libro, tu dispositivo transmite la solicitud a nuestro servidor. Como ocurre en un servicio web habitual, los registros técnicos pueden incluir fecha, dirección IP, agente de usuario y URL solicitada; una URL de búsqueda puede contener el término escrito. Usamos estos registros únicamente para operar, proteger y diagnosticar el servicio, no para publicidad ni perfiles.</p>
-      <p>Los registros se conservan en el journal del servidor hasta su rotación automática por los límites de almacenamiento del sistema. No ofrecemos un historial de búsqueda a otros usuarios. Puedes solicitar información o eliminación mediante el contacto indicado; la eliminación de registros históricos puede requerir identificar entradas concretas y está sujeta a obligaciones técnicas o legales.</p>
+      <h2 data-i18n="privacy.logsTitle">Solicitudes al catálogo y registros técnicos</h2>
+      <p data-i18n="privacy.logs1">Al consultar el catálogo, buscar una obra, ver una portada o descargar un libro, tu dispositivo transmite la solicitud a nuestro servidor. Como ocurre en un servicio web habitual, los registros técnicos pueden incluir fecha, dirección IP, agente de usuario y URL solicitada; una URL de búsqueda puede contener el término escrito. Usamos estos registros únicamente para operar, proteger y diagnosticar el servicio, no para publicidad ni perfiles.</p>
+      <p data-i18n="privacy.logs2">Los registros se conservan en el journal del servidor hasta su rotación automática por los límites de almacenamiento del sistema. No ofrecemos un historial de búsqueda a otros usuarios. Puedes solicitar información o eliminación mediante el contacto indicado; la eliminación de registros históricos puede requerir identificar entradas concretas y está sujeta a obligaciones técnicas o legales.</p>
 
-      <h2>Proveedores</h2>
-      <p><strong>Cloudflare</strong> distribuye y protege la conexión a scrollia.org y api.scrollia.org, por lo que procesa datos de conexión como la dirección IP conforme a su propia <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">política de privacidad</a>. No incluimos SDK publicitarios ni de analítica.</p>
-      <p><strong>Google Translate</strong> solo recibe el texto que decidas traducir cuando pulsas esa acción y se abre el navegador. No enviamos texto a Google automáticamente. Ese uso se rige por la <a href="https://policies.google.com/privacy" rel="noopener">política de Google</a>.</p>
+      <h2 data-i18n="privacy.providersTitle">Proveedores</h2>
+      <p data-i18n="privacy.providers1"><strong>Cloudflare</strong> distribuye y protege la conexión a scrollia.org y api.scrollia.org, por lo que procesa datos de conexión como la dirección IP conforme a su propia <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">política de privacidad</a>. No incluimos SDK publicitarios ni de analítica.</p>
+      <p data-i18n="privacy.providers2"><strong>Google Translate</strong> solo recibe el texto que decidas traducir cuando pulsas esa acción y se abre el navegador. No enviamos texto a Google automáticamente. Ese uso se rige por la <a href="https://policies.google.com/privacy" rel="noopener">política de Google</a>.</p>
 
-      <h2>Contenido y fuentes</h2>
-      <p>Las sinopsis proceden de Wikipedia y se atribuyen bajo CC BY-SA 4.0. Las fuentes tipográficas se distribuyen con la app o el sitio; no se cargan desde Google Fonts ni otros servidores de terceros.</p>
+      <h2 data-i18n="privacy.contentTitle">Contenido y fuentes</h2>
+      <p data-i18n="privacy.content">Las sinopsis proceden de Wikipedia y se atribuyen bajo CC BY-SA 4.0. Las fuentes tipográficas se distribuyen con la app o el sitio; no se cargan desde Google Fonts ni otros servidores de terceros.</p>
 
-      <h2>Eliminación y seguridad</h2>
-      <p>Puedes borrar libros desde la app. Al desinstalarla, Android elimina su biblioteca, progreso y ajustes locales; los archivos originales que importaste no se modifican. No existe una cuenta Scrollia que eliminar. Las conexiones a nuestros servicios usan HTTPS.</p>
+      <h2 data-i18n="privacy.deletionTitle">Eliminación y seguridad</h2>
+      <p data-i18n="privacy.deletion">Puedes borrar libros desde la app. Al desinstalarla, Android elimina su biblioteca, progreso y ajustes locales; los archivos originales que importaste no se modifican. No existe una cuenta Scrollia que eliminar. Las conexiones a nuestros servicios usan HTTPS.</p>
 
-      <h2>Menores y alcance internacional</h2>
-      <p>Scrollia es una biblioteca para público general y no está dirigida específicamente a menores de 13 años. No solicitamos edad ni datos escolares. Cloudflare puede procesar conexiones en otros países; aplicamos esta política con independencia de tu ubicación.</p>
+      <h2 data-i18n="privacy.childrenTitle">Menores y alcance internacional</h2>
+      <p data-i18n="privacy.children">Scrollia es una biblioteca para público general y no está dirigida específicamente a menores de 13 años. No solicitamos edad ni datos escolares. Cloudflare puede procesar conexiones en otros países; aplicamos esta política con independencia de tu ubicación.</p>
 
-      <h2>Cambios</h2>
-      <p>Publicaremos cualquier cambio en esta página con una nueva fecha de vigencia. La política no se modifica mediante la app sin que puedas consultarla aquí.</p>
-    </section>
-
-    <hr class="divider">
-
-    <section lang="en">
-      <h1>Privacy Policy</h1>
-      <p class="legal__meta">Scrollia and Scrollia for Android · Effective October 27, 2026</p>
-      <h2>Overview</h2>
-      <p>Scrollia has no accounts, ads, or advertising analytics. We do not sell data or build reader profiles. Your library, reading progress, and settings stay on your device. The app and website use HTTPS to contact <strong>api.scrollia.org</strong> for catalog data and downloads.</p>
-
-      <h2>Controller and contact</h2>
-      <p>This policy covers Scrollia, its website, and its Android app. For privacy questions or requests, email <a href="mailto:contact@scrollia.org">contact@scrollia.org</a>.</p>
-
-      <h2>Data stored on your device</h2>
-      <p>Downloaded or imported books, reading progress, and preferences are stored locally. Scrollia does not sync them to an account or send them to our servers. Imports use Android's file picker; we do not request broad storage, contacts, location, camera, or microphone access. Android automatic backup is disabled for the app.</p>
-
-      <h2>Catalog requests and technical logs</h2>
-      <p>Browsing the catalog, searching, loading a cover, or downloading a book sends a request to our server. Standard technical logs may include the time, IP address, user agent, and requested URL; a search URL may contain your search term. We use these records only to operate, secure, and troubleshoot the service, not for advertising or profiling.</p>
-      <p>Records remain in the server journal until automatic rotation under the system's storage limits. We do not expose your search history to other users. You may request information or deletion through the contact above; identifying specific historical entries may be necessary and requests may be subject to technical or legal obligations.</p>
-
-      <h2>Service providers</h2>
-      <p><strong>Cloudflare</strong> delivers and protects connections to scrollia.org and api.scrollia.org and processes connection data such as IP addresses under its own <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">privacy policy</a>. We include no advertising or analytics SDKs.</p>
-      <p><strong>Google Translate</strong> receives selected text only when you choose Translate and the browser opens. We do not send text to Google automatically. That use is governed by <a href="https://policies.google.com/privacy" rel="noopener">Google's policy</a>.</p>
-
-      <h2>Content and fonts</h2>
-      <p>Summaries come from Wikipedia and are attributed under CC BY-SA 4.0. Fonts ship with the app or website; they are not loaded from Google Fonts or other third-party font services.</p>
-
-      <h2>Deletion and security</h2>
-      <p>You can remove books in the app. Uninstalling deletes its local library, progress, and settings; original files you imported are not modified. There is no Scrollia account to delete. Connections to our services use HTTPS.</p>
-
-      <h2>Children and international use</h2>
-      <p>Scrollia is a general-audience library and is not specifically directed at children under 13. We do not request age or school data. Cloudflare may process connections in other countries; this policy applies regardless of your location.</p>
-
-      <h2>Changes</h2>
-      <p>We will publish any changes here with a new effective date.</p>
+      <h2 data-i18n="privacy.changesTitle">Cambios</h2>
+      <p data-i18n="privacy.changes">Publicaremos cualquier cambio en esta página con una nueva fecha de vigencia. La política no se modifica mediante la app sin que puedas consultarla aquí.</p>
     </section>
   </main>
 
@@ -109,5 +116,8 @@
     <a class="footer__brand" href="../" aria-label="Scrollia"><img src="../assets/icons/favicon.svg" alt="" width="28" height="28"><span aria-hidden="true">crollia</span></a>
     <p class="footer__text"><a href="mailto:contact@scrollia.org">contact@scrollia.org</a></p>
   </footer>
+
+  <script src="../i18n.js"></script>
+  <script src="../app.js"></script>
 </body>
 </html>

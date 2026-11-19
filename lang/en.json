@@ -8,8 +8,11 @@
     "catalog": "Catalog",
     "app": "App",
     "mission": "Mission",
-    "themeToDark": "Switch to dark theme",
-    "themeToLight": "Switch to light theme",
+    "theme": "Theme",
+    "themeAuto": "Automatic",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeAmoled": "AMOLED",
     "language": "Language"
   },
   "continue": {
@@ -155,5 +158,33 @@
     "religion": "Religion",
     "romance": "Romance",
     "science": "Science"
+  },
+  "privacy": {
+    "docTitle": "Privacy — Scrollia",
+    "description": "Privacy policy for Scrollia and Scrollia for Android.",
+    "caption": "Privacy",
+    "heading": "Privacy Policy",
+    "meta": "Scrollia and Scrollia for Android · Effective October 27, 2026",
+    "navLegal": "Legal",
+    "summaryTitle": "Overview",
+    "summary": "Scrollia has no accounts, ads, or advertising analytics. We do not sell data or build reader profiles. Your library, reading progress, and settings stay on your device. The app and website use HTTPS to contact <strong>api.scrollia.org</strong> for catalog data and downloads.",
+    "controllerTitle": "Controller and contact",
+    "controller": "This policy covers Scrollia, its website, and its Android app. For privacy questions or requests, email <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
+    "deviceTitle": "Data stored on your device",
+    "device": "Downloaded or imported books, reading progress, and preferences are stored locally. Scrollia does not sync them to an account or send them to our servers. Imports use Android's file picker; we do not request broad storage, contacts, location, camera, or microphone access. Android automatic backup is disabled for the app.",
+    "logsTitle": "Catalog requests and technical logs",
+    "logs1": "Browsing the catalog, searching, loading a cover, or downloading a book sends a request to our server. Standard technical logs may include the time, IP address, user agent, and requested URL; a search URL may contain your search term. We use these records only to operate, secure, and troubleshoot the service, not for advertising or profiling.",
+    "logs2": "Records remain in the server journal until automatic rotation under the system's storage limits. We do not expose your search history to other users. You may request information or deletion through the contact above; identifying specific historical entries may be necessary and requests may be subject to technical or legal obligations.",
+    "providersTitle": "Service providers",
+    "providers1": "<strong>Cloudflare</strong> delivers and protects connections to scrollia.org and api.scrollia.org and processes connection data such as IP addresses under its own <a href=\"https://www.cloudflare.com/privacypolicy/\" rel=\"noopener\">privacy policy</a>. We include no advertising or analytics SDKs.",
+    "providers2": "<strong>Google Translate</strong> receives selected text only when you choose Translate and the browser opens. We do not send text to Google automatically. That use is governed by <a href=\"https://policies.google.com/privacy\" rel=\"noopener\">Google's policy</a>.",
+    "contentTitle": "Content and fonts",
+    "content": "Summaries come from Wikipedia and are attributed under CC BY-SA 4.0. Fonts ship with the app or website; they are not loaded from Google Fonts or other third-party font services.",
+    "deletionTitle": "Deletion and security",
+    "deletion": "You can remove books in the app. Uninstalling deletes its local library, progress, and settings; original files you imported are not modified. There is no Scrollia account to delete. Connections to our services use HTTPS.",
+    "childrenTitle": "Children and international use",
+    "children": "Scrollia is a general-audience library and is not specifically directed at children under 13. We do not request age or school data. Cloudflare may process connections in other countries; this policy applies regardless of your location.",
+    "changesTitle": "Changes",
+    "changes": "We will publish any changes here with a new effective date. The policy is not changed through the app without a version you can read on this page."
   }
 }
