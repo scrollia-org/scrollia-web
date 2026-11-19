@@ -1,7 +1,11 @@
 User-agent: *
 Allow: /
+Allow: /llms.txt
+Allow: /faq/
+Allow: /privacy/
 Disallow: /read.html
 Disallow: /tools/
 
 # EPUB text lives on the API; the reader page is for humans, not indexing.
+# Site map for humans and bots: https://scrollia.org/llms.txt
 Sitemap: https://scrollia.org/sitemap.xml

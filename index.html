@@ -25,6 +25,34 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://scrollia.org/#organization",
+        "name": "Scrollia",
+        "url": "https://scrollia.org/",
+        "logo": "https://scrollia.org/assets/icons/icon-512.png",
+        "sameAs": [
+          "https://github.com/scrollia-org/scrollia-web",
+          "https://github.com/scrollia-org/scrollia-android"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://scrollia.org/#website",
+        "name": "Scrollia",
+        "url": "https://scrollia.org/",
+        "description": "A free library of public-domain classics. No ads, no accounts.",
+        "publisher": { "@id": "https://scrollia.org/#organization" },
+        "inLanguage": ["es", "en", "fr", "de", "pt", "it", "zh"]
+      }
+    ]
+  }
+  </script>
+
   <script>
     (function () {
       var pref;
