@@ -93,7 +93,8 @@
   "footer": {
     "built": "Built on the <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> corpus, with editions from <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>",
     "legal": "Books are in the public domain in their respective jurisdictions.",
-    "privacy": "Privacy"
+    "privacy": "Privacy",
+    "faq": "FAQ"
   },
   "work": {
     "back": "Back to the catalog",
@@ -186,5 +187,19 @@
     "children": "Scrollia is a general-audience library and is not specifically directed at children under 13. We do not request age or school data. Cloudflare may process connections in other countries; this policy applies regardless of your location.",
     "changesTitle": "Changes",
     "changes": "We will publish any changes here with a new effective date. The policy is not changed through the app without a version you can read on this page."
+  },
+  "faq": {
+    "docTitle": "FAQ — Scrollia",
+    "description": "Frequently asked questions about Scrollia: translations, rights, and languages.",
+    "caption": "Help",
+    "heading": "Frequently asked questions",
+    "navLabel": "Help",
+    "intro": "Short answers about translations, copyright, and languages. If yours is missing, email <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
+    "aiTitle": "Why are there AI translations when others already exist?",
+    "ai": "We only translate with AI when there is no digitized public-domain historical translation, or when an existing one is still under copyright in many countries. For example, for <em>Alice</em>, Gutiérrez Gili’s Spanish version (1927) is not digitized anywhere, and Lobato’s Portuguese version is still protected in the U.S. AI prepares a draft; then comes editorial and human review. That translation is CC0 (you may copy and improve it without asking), it is always noted in the colophon, and when a free historical edition appears we offer that too.",
+    "langTitle": "Why don’t I see book X in my language?",
+    "lang": "Editions in each language are added gradually: first we need a free source or a reviewed translation. We could dump a whole book through an automatic translator (for example Google), but for many classics the quality is not good enough. If enough people ask for a title or a language, we will prioritize it.",
+    "placeTitle": "Why isn’t book X available where I live?",
+    "place": "Most often, from the country you are connecting from, that work is not yet free to use. Scrollia only publishes what is free worldwide: if the book is still under copyright in your country (or another), we do not offer it. It may also be that we have not onboarded it yet—in that case, write to us."
   }
 }

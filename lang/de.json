@@ -93,7 +93,8 @@
   "footer": {
     "built": "Aufgebaut auf dem Korpus von <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a>, mit Ausgaben von <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>",
     "legal": "Die Bücher sind in ihren jeweiligen Rechtsordnungen gemeinfrei.",
-    "privacy": "Datenschutz"
+    "privacy": "Datenschutz",
+    "faq": "FAQ"
   },
   "work": {
     "back": "Zurück zum Katalog",
@@ -186,5 +187,19 @@
     "children": "Scrollia ist eine Bibliothek für ein allgemeines Publikum und richtet sich nicht speziell an Kinder unter 13 Jahren. Wir erfragen weder Alter noch Schuldaten. Cloudflare kann Verbindungen in anderen Ländern verarbeiten; diese Erklärung gilt unabhängig von Ihrem Standort.",
     "changesTitle": "Änderungen",
     "changes": "Änderungen veröffentlichen wir auf dieser Seite mit neuem Gültigkeitsdatum. Die Richtlinie wird nicht über die App geändert, ohne dass Sie sie hier lesen können."
+  },
+  "faq": {
+    "docTitle": "FAQ — Scrollia",
+    "description": "Häufige Fragen zu Scrollia: Übersetzungen, Rechte und Sprachen.",
+    "caption": "Hilfe",
+    "heading": "Häufige Fragen",
+    "navLabel": "Hilfe",
+    "intro": "Kurze Antworten zu Übersetzungen, Urheberrecht und Sprachen. Fehlt deine Frage, schreib an <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
+    "aiTitle": "Warum gibt es KI-Übersetzungen, wenn schon andere existieren?",
+    "ai": "Wir übersetzen nur mit KI, wenn es keine digitalisierte gemeinfreie historische Übersetzung gibt oder eine vorhandene in vielen Ländern noch urheberrechtlich geschützt ist. Bei <em>Alice</em> etwa ist Gutiérrez Gilis spanische Fassung (1927) nirgends digitalisiert, und Lobatos portugiesische Fassung ist in den USA noch geschützt. Die KI erstellt einen Entwurf; danach folgt redaktionelle und menschliche Prüfung. Diese Übersetzung ist CC0 (kopieren und verbessern ohne Nachfrage), steht immer im Kolophon und wird ergänzt, sobald eine freie historische Ausgabe vorliegt.",
+    "langTitle": "Warum sehe ich Buch X nicht in meiner Sprache?",
+    "lang": "Ausgaben in jeder Sprache kommen nach und nach: zuerst braucht es eine freie Quelle oder eine geprüfte Übersetzung. Wir könnten ein ganzes Buch durch einen automatischen Übersetzer (etwa Google) jagen, aber bei vielen Klassikern reicht die Qualität nicht. Kommen genug Anfragen zu einem Titel oder einer Sprache, priorisieren wir sie.",
+    "placeTitle": "Warum ist Buch X dort, wo ich lebe, nicht verfügbar?",
+    "place": "Am häufigsten ist das Werk vom Land aus, von dem du dich verbindest, noch nicht frei nutzbar. Scrollia veröffentlicht nur, was weltweit frei ist: steht das Buch in deinem Land (oder einem anderen) noch unter Schutz, bieten wir es nicht an. Es kann auch sein, dass wir es noch nicht aufgenommen haben — dann schreib uns."
   }
 }

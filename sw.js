@@ -3,13 +3,13 @@
    all opened books. The reader requests stable EPUB byte ranges; each chunk is
    cached with its range so a book opened once can be reopened offline. */
 
-const VERSION = "scrollia-v6";
+const VERSION = "scrollia-v7";
 const SHELL = `${VERSION}-shell`;
 const DATA = `${VERSION}-data`;
 
 const PRECACHE = [
   "./",
-  "index.html", "catalog.html", "book.html", "read.html", "privacy/",
+  "index.html", "catalog.html", "book.html", "read.html", "privacy/", "faq/",
   "styles.css", "tokens.css", "fonts.css",
   "assets/fonts/OFL-1.1.txt", "assets/fonts/FONT-NOTICES.txt",
   "i18n.js", "app.js", "api.js", "catalog.js", "continue.js", "browse.js",
