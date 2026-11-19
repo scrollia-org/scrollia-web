@@ -1,7 +1,7 @@
 /* Scrollia · i18n — strings externalized in lang/*.json.
    Default to the first supported browser language, falling back to Spanish. */
 
-const SUPPORTED = ["es", "en", "fr", "de", "pt", "zh"];
+const SUPPORTED = ["es", "en", "fr", "de", "pt", "it", "zh"];
 const DEFAULT = "es";
 const HTML_LANG = { zh: "zh-Hans" };
 
