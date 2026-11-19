@@ -91,7 +91,7 @@
     "quoteCite": "— John Milton, Areopagitica"
   },
   "footer": {
-    "built": "Built on the <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> corpus, with editions from <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>",
+    "built": "Built on the <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> corpus, with editions from <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> and <a href=\"https://www.liberliber.it\" rel=\"noopener\">Liber Liber</a>",
     "legal": "Books are in the public domain in their respective jurisdictions.",
     "privacy": "Privacy",
     "faq": "FAQ"
@@ -204,7 +204,7 @@
     "pdTitle": "What is the public domain?",
     "pd": "A work is in the public domain when copyright has expired (or never applied) and anyone may copy, translate, or share it without asking. The date is not the same everywhere: it depends on local law (for example, years after the author’s death). So a book can be free in one place and still protected in another.",
     "sourceTitle": "Where do the texts come from?",
-    "source": "From the <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> corpus and, when there is a careful free edition, from <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> and other open sources. At Scrollia we check texts, tidy metadata, and translate when needed. Each work page says where it came from; synopses often come from Wikipedia (CC BY-SA 4.0).",
+    "source": "From the <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> corpus and, when there is a careful free edition, from <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>, <a href=\"https://www.liberliber.it\" rel=\"noopener\">Liber Liber</a>, and other open sources. At Scrollia we check texts, tidy metadata, and translate when needed. Each work page says where it came from; synopses often come from Wikipedia (CC BY-SA 4.0).",
     "adsTitle": "Why are there no ads or accounts?",
     "ads": "What I care about is that anyone can read. I started without accounts, without ads, and open source because that felt right: classics should not sit behind a paywall or a profile. Some people have said accounts or a community would be great; we can add that later if it is needed. Scrollia is for the people who use it: if they ask for changes, we make them. I pay for the server and the editorial work; if there is a support page someday, it will be voluntary and separate.",
     "typoTitle": "How do I report a typo?",

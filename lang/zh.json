@@ -90,7 +90,7 @@
     "quoteCite": "—— 杜甫《奉赠韦左丞丈二十二韵》"
   },
   "footer": {
-    "built": "基于 <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> 的语料构建，并采用 <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> 的版本",
+    "built": "基于 <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> 的语料构建，并采用 <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> 与 <a href=\"https://www.liberliber.it\" rel=\"noopener\">Liber Liber</a> 的版本",
     "legal": "这些书籍在其所属司法管辖区内属于公有领域。",
     "privacy": "隐私",
     "faq": "常见问题"
@@ -202,7 +202,7 @@
     "pdTitle": "什么是公版（公有领域）？",
     "pd": "当作品的版权已过期（或从未适用）时，任何人都可以不经许可复制、翻译或分享，这就是公版。各国进入公版的时间不同，取决于当地法律（例如作者去世后的年数）。因此同一本书可能在某地自由、在另一地仍受保护。",
     "sourceTitle": "文本从哪里来？",
-    "source": "来自 <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> 语料，以及在有精校自由版本时来自 <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> 等开放来源。Scrollia 会检查文本、整理元数据，必要时再翻译。每部作品的页面会写明来源；简介多来自维基百科（CC BY-SA 4.0）。",
+    "source": "来自 <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> 语料，以及在有精校自由版本时来自 <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a>、<a href=\"https://www.liberliber.it\" rel=\"noopener\">Liber Liber</a> 等开放来源。Scrollia 会检查文本、整理元数据，必要时再翻译。每部作品的页面会写明来源；简介多来自维基百科（CC BY-SA 4.0）。",
     "adsTitle": "为什么没有广告也没有账户？",
     "ads": "我真正在意的是：任何人都能阅读。我一开始就没有账户、没有广告、并开源，因为我觉得这样才对：经典不该被付费墙或个人资料挡住。有人觉得账户或社区功能会很好；如果有需要，以后可以加。Scrollia 是给使用者的：大家要改，就改。服务器和编辑成本目前由我承担；若将来有支持页，也会是自愿且独立的。",
     "typoTitle": "如何报告错字？",
