@@ -1,18 +1,22 @@
 /* Scrollia · site theme and reader preview.
    The head script sets the initial theme before paint to avoid a flash.
    Preference: auto | light | dark | amoled (default auto). data-theme is the
-   resolved surface; data-theme-pref is what the user chose. */
+   resolved surface; data-theme-pref is what the user chose. The nav button
+   opens a menu (same four options as the Android dialog), not a blind cycle. */
 
 const root = document.documentElement;
-const themeButton = document.querySelector(".nav__theme");
+const themePicker = document.querySelector(".theme-picker");
+const themeButton = themePicker?.querySelector(".nav__theme");
+const themeMenu = themePicker?.querySelector(".theme-menu");
+const themeOptions = themeMenu ? [...themeMenu.querySelectorAll("[data-theme-option]")] : [];
 const systemDark = matchMedia("(prefers-color-scheme: dark)");
 
 const THEME_PREFS = ["auto", "light", "dark", "amoled"];
-const THEME_NEXT_ARIA = {
-  auto: "nav.themeToLight",
-  light: "nav.themeToDark",
-  dark: "nav.themeToAmoled",
-  amoled: "nav.themeToAuto",
+const THEME_ARIA = {
+  auto: "nav.themeAuto",
+  light: "nav.themeLight",
+  dark: "nav.themeDark",
+  amoled: "nav.themeAmoled",
 };
 
 function savedTheme() {
@@ -29,21 +33,52 @@ function resolveTheme(pref) {
   return pref;
 }
 
+function setThemeMenuOpen(open) {
+  if (!themeButton || !themeMenu) return;
+  themeMenu.hidden = !open;
+  themeButton.setAttribute("aria-expanded", String(open));
+}
+
 function applyThemePreference(pref) {
   root.dataset.themePref = pref;
   root.dataset.theme = resolveTheme(pref);
+  themeOptions.forEach((option) => {
+    const selected = option.dataset.themeOption === pref;
+    option.setAttribute("aria-selected", String(selected));
+  });
   if (themeButton) {
-    themeButton.dataset.i18nAria = THEME_NEXT_ARIA[pref];
+    themeButton.dataset.i18nAria = THEME_ARIA[pref];
     window.scrolliaI18n?.refresh();
   }
 }
 
-if (themeButton) {
+function chooseTheme(pref) {
+  try { localStorage.setItem("scrollia-theme", pref); } catch (_) {}
+  applyThemePreference(pref);
+  setThemeMenuOpen(false);
+  themeButton?.focus();
+}
+
+if (themeButton && themeMenu) {
   themeButton.addEventListener("click", () => {
-    const current = themePreference();
-    const next = THEME_PREFS[(THEME_PREFS.indexOf(current) + 1) % THEME_PREFS.length];
-    try { localStorage.setItem("scrollia-theme", next); } catch (_) {}
-    applyThemePreference(next);
+    setThemeMenuOpen(themeMenu.hidden);
+  });
+
+  themeOptions.forEach((option) => {
+    option.addEventListener("click", () => chooseTheme(option.dataset.themeOption));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!themeMenu.hidden && !themePicker.contains(event.target)) {
+      setThemeMenuOpen(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !themeMenu.hidden) {
+      setThemeMenuOpen(false);
+      themeButton.focus();
+    }
   });
 }
 

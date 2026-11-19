@@ -8,10 +8,11 @@
     "catalog": "Katalog",
     "app": "App",
     "mission": "Mission",
-    "themeToDark": "Zum dunklen Design wechseln",
-    "themeToLight": "Zum hellen Design wechseln",
-    "themeToAmoled": "Zum AMOLED-Design wechseln",
-    "themeToAuto": "Zum Systemdesign wechseln",
+    "theme": "Design",
+    "themeAuto": "Automatisch",
+    "themeLight": "Hell",
+    "themeDark": "Dunkel",
+    "themeAmoled": "AMOLED",
     "language": "Sprache"
   },
   "continue": {

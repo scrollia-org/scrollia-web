@@ -8,10 +8,11 @@
     "catalog": "书目",
     "app": "应用",
     "mission": "使命",
-    "themeToDark": "切换到深色主题",
-    "themeToLight": "切换到浅色主题",
-    "themeToAmoled": "切换到 AMOLED 主题",
-    "themeToAuto": "切换到跟随系统",
+    "theme": "主题",
+    "themeAuto": "自动",
+    "themeLight": "浅色",
+    "themeDark": "深色",
+    "themeAmoled": "AMOLED",
     "language": "语言"
   },
   "continue": {

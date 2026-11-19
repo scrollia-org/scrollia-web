@@ -45,7 +45,7 @@
   <link rel="preload" href="assets/fonts/literata-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="tokens.css?v=2">
-  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="styles.css?v=15">
 </head>
 <body>
 
@@ -70,10 +70,33 @@
         <option value="pt" lang="pt">Português</option>
         <option value="zh" lang="zh-Hans">中文</option>
       </select>
-      <button type="button" class="nav__theme" aria-label="Cambiar a tema oscuro" data-i18n-aria="nav.themeToDark">
-        <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
-        <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.75v2M12 19.25v2M4.75 12h-2M21.25 12h-2M6.9 6.9 5.5 5.5M18.5 18.5l-1.4-1.4M6.9 17.1l-1.4 1.4M18.5 5.5l-1.4 1.4"/></svg>
-      </button>
+      <div class="theme-picker">
+        <button type="button" class="nav__theme" aria-label="Tema" data-i18n-aria="nav.theme"
+          aria-haspopup="listbox" aria-expanded="false" aria-controls="theme-menu">
+          <svg class="icon icon--auto" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.25"/><path class="icon__fill" d="M12 4.75a7.25 7.25 0 0 0 0 14.5z"/></svg>
+          <svg class="icon icon--sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.75v2M12 19.25v2M4.75 12h-2M21.25 12h-2M6.9 6.9 5.5 5.5M18.5 18.5l-1.4-1.4M6.9 17.1l-1.4 1.4M18.5 5.5l-1.4 1.4"/></svg>
+          <svg class="icon icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+          <svg class="icon icon--amoled" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="7.25"/><circle class="icon__fill" cx="12" cy="12" r="4.5"/></svg>
+        </button>
+        <div class="theme-menu" id="theme-menu" role="listbox" hidden>
+          <button type="button" class="theme-menu__option" role="option" data-theme-option="auto" aria-selected="false">
+            <span class="theme-menu__swatch theme-menu__swatch--auto" aria-hidden="true"></span>
+            <span data-i18n="nav.themeAuto">Automático</span>
+          </button>
+          <button type="button" class="theme-menu__option" role="option" data-theme-option="light" aria-selected="false">
+            <span class="theme-menu__swatch theme-menu__swatch--light" aria-hidden="true"></span>
+            <span data-i18n="nav.themeLight">Claro</span>
+          </button>
+          <button type="button" class="theme-menu__option" role="option" data-theme-option="dark" aria-selected="false">
+            <span class="theme-menu__swatch theme-menu__swatch--dark" aria-hidden="true"></span>
+            <span data-i18n="nav.themeDark">Oscuro</span>
+          </button>
+          <button type="button" class="theme-menu__option" role="option" data-theme-option="amoled" aria-selected="false">
+            <span class="theme-menu__swatch theme-menu__swatch--amoled" aria-hidden="true"></span>
+            <span data-i18n="nav.themeAmoled">AMOLED</span>
+          </button>
+        </div>
+      </div>
     </div>
   </header>
 
