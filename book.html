@@ -18,12 +18,17 @@
 
   <script>
     (function () {
-      var theme;
-      try { theme = localStorage.getItem("scrollia-theme"); } catch (_) {}
-      if (theme !== "light" && theme !== "dark" && theme !== "amoled") {
-        theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      var pref;
+      try { pref = localStorage.getItem("scrollia-theme"); } catch (_) {}
+      if (pref !== "light" && pref !== "dark" && pref !== "amoled" && pref !== "auto") {
+        pref = "auto";
       }
-      document.documentElement.dataset.theme = theme;
+      var theme = pref === "auto"
+        ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+        : pref;
+      var root = document.documentElement;
+      root.dataset.themePref = pref;
+      root.dataset.theme = theme;
     })();
   </script>
 

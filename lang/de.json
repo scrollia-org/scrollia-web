@@ -10,6 +10,8 @@
     "mission": "Mission",
     "themeToDark": "Zum dunklen Design wechseln",
     "themeToLight": "Zum hellen Design wechseln",
+    "themeToAmoled": "Zum AMOLED-Design wechseln",
+    "themeToAuto": "Zum Systemdesign wechseln",
     "language": "Sprache"
   },
   "continue": {

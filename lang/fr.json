@@ -10,6 +10,8 @@
     "mission": "Mission",
     "themeToDark": "Passer au thème sombre",
     "themeToLight": "Passer au thème clair",
+    "themeToAmoled": "Passer au thème AMOLED",
+    "themeToAuto": "Passer au thème système",
     "language": "Langue"
   },
   "continue": {

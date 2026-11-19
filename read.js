@@ -75,7 +75,9 @@ swatches.forEach((swatch) => {
 });
 
 systemDark.addEventListener("change", (event) => {
-  if (stored("scrollia-theme")) return;
+  const pref = stored("scrollia-theme");
+  if (pref && pref !== "auto") return;
+  root.dataset.themePref = pref || "auto";
   applyReaderTheme(event.matches ? "night" : stored("scrollia-reader-theme") === "sepia" ? "sepia" : "paper");
 });
 

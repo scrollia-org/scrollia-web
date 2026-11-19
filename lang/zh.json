@@ -10,6 +10,8 @@
     "mission": "使命",
     "themeToDark": "切换到深色主题",
     "themeToLight": "切换到浅色主题",
+    "themeToAmoled": "切换到 AMOLED 主题",
+    "themeToAuto": "切换到跟随系统",
     "language": "语言"
   },
   "continue": {

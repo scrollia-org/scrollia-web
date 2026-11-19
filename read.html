@@ -19,15 +19,19 @@
        mode; otherwise Sepia when selected, or Paper. -->
   <script>
     (function () {
-      var theme, reader;
+      var pref, reader;
       try {
-        theme = localStorage.getItem("scrollia-theme");
+        pref = localStorage.getItem("scrollia-theme");
         reader = localStorage.getItem("scrollia-reader-theme");
       } catch (_) {}
-      if (theme !== "light" && theme !== "dark" && theme !== "amoled") {
-        theme = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      if (pref !== "light" && pref !== "dark" && pref !== "amoled" && pref !== "auto") {
+        pref = "auto";
       }
+      var theme = pref === "auto"
+        ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+        : pref;
       var root = document.documentElement;
+      root.dataset.themePref = pref;
       root.dataset.theme = theme;
       root.dataset.readerTheme = theme === "dark" ? "night" : theme === "amoled" ? "amoled" : reader === "sepia" ? "sepia" : "paper";
     })();

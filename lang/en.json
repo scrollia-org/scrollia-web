@@ -10,6 +10,8 @@
     "mission": "Mission",
     "themeToDark": "Switch to dark theme",
     "themeToLight": "Switch to light theme",
+    "themeToAmoled": "Switch to AMOLED theme",
+    "themeToAuto": "Switch to system theme",
     "language": "Language"
   },
   "continue": {
