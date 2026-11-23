@@ -208,7 +208,7 @@
     "adsTitle": "Why are there no ads or accounts?",
     "ads": "What I care about is that anyone can read. I started without accounts, without ads, and open source because that felt right: classics should not sit behind a paywall or a profile. Some people have said accounts or a community would be great; we can add that later if it is needed. Scrollia is for the people who use it: if they ask for changes, we make them. I pay for the server and the editorial work; if there is a support page someday, it will be voluntary and separate.",
     "typoTitle": "How do I report a typo?",
-    "typo": "Email me at <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a> with the title, language, and if you can, the chapter or a short quote. For now it is by email; later there will be something easier from the reader.",
+    "typo": "In the Android app: the reader ⋮ menu (“Report a typo”) or select the text and “Report typo”; the email is prefilled with the book and chapter. You can also write to <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
     "progressTitle": "How do progress and “Continue reading” work?",
     "progress": "In the app and on the web, progress is stored on that device (or in that browser). When you come back, “Continue reading” puts you where you left off. No account needed. If you clear app or site data, or switch phone or browser, that progress does not move on its own.",
     "importTitle": "Can I import my own books?",
