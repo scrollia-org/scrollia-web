@@ -34,7 +34,9 @@
     "loading": "正在加载书目…",
     "error": "暂时无法加载书目。",
     "retry": "重试",
-    "all": "查看全部书目"
+    "all": "查看全部书目",
+    "recent": "新上架",
+    "recentAll": "查看新书"
   },
   "browse": {
     "metaTitle": "书目 · Scrollia",
@@ -53,7 +55,8 @@
     "sortTitle": "书名 A–Z",
     "sortAuthor": "作者 A–Z",
     "allLanguages": "全部语言",
-    "allGenres": "全部类型"
+    "allGenres": "全部类型",
+    "sortAdded": "新上架"
   },
   "feat": {
     "free": {

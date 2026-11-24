@@ -35,7 +35,9 @@
     "loading": "Katalog wird geladen …",
     "error": "Der Katalog konnte gerade nicht geladen werden.",
     "retry": "Erneut versuchen",
-    "all": "Ganzen Katalog ansehen"
+    "all": "Ganzen Katalog ansehen",
+    "recent": "Neu hinzugefügt",
+    "recentAll": "Neuheiten ansehen"
   },
   "browse": {
     "metaTitle": "Katalog · Scrollia",
@@ -54,7 +56,8 @@
     "sortTitle": "Titel A–Z",
     "sortAuthor": "Autor A–Z",
     "allLanguages": "Alle Sprachen",
-    "allGenres": "Alle Genres"
+    "allGenres": "Alle Genres",
+    "sortAdded": "Neu hinzugefügt"
   },
   "feat": {
     "free": {

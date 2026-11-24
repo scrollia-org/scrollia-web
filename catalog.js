@@ -1,4 +1,4 @@
-/* Scrollia · live catalog. Counts, languages, shelf and hero covers come from
+/* Scrollia · live catalog. Counts, languages, shelves and hero covers come from
    the API (GET /site): curating the catalog requires no web changes. */
 
 import { API, t, uiLang, plural, element, bookCard, bookCover } from "./api.js";
@@ -8,7 +8,9 @@ const HERO_SIZE = 3;
 
 const hero = document.querySelector(".hero");
 const heroCovers = document.querySelector(".hero__covers");
-const shelf = document.querySelector(".shelf");
+const shelf = document.querySelector(".shelf--featured");
+const recentSection = document.querySelector(".catalog__recent");
+const recentShelf = document.querySelector(".shelf--recent");
 const shelfError = document.querySelector(".shelf__error");
 const countLine = document.querySelector(".catalog__count");
 
@@ -52,6 +54,7 @@ function renderCount() {
 function showLoading() {
   shelfError.hidden = true;
   shelf.hidden = false;
+  recentSection.hidden = true;
   countLine.textContent = t("catalog.loading", "Cargando catálogo…");
   countLine.hidden = false;
   shelf.setAttribute("aria-busy", "true");
@@ -64,6 +67,7 @@ function showLoading() {
 
 function showError() {
   shelf.hidden = true;
+  recentSection.hidden = true;
   shelf.setAttribute("aria-busy", "false");
   shelfError.hidden = false;
   countLine.hidden = true;
@@ -91,12 +95,17 @@ function inUiLanguage(work) {
   return work;
 }
 
+function forShelf(work) {
+  const localized = inUiLanguage(work);
+  return {
+    ...localized,
+    originalCover: localized.cover,
+    cover: localized.original_cover ?? localized.cover,
+  };
+}
+
 function render() {
-  const books = interleave(site.featured, Object.keys(site.languages)).map(inUiLanguage).map((work) => ({
-    ...work,
-    originalCover: work.cover,
-    cover: work.original_cover ?? work.cover,
-  }));
+  const books = interleave(site.featured, Object.keys(site.languages)).map(forShelf);
   shelf.replaceChildren(...books.slice(0, SHELF_SIZE).map(bookCard));
   shelf.setAttribute("aria-busy", "false");
   // The taller center cover belongs to the first book.
@@ -104,6 +113,14 @@ function render() {
   if (fan.length === 3) fan.unshift(fan.splice(1, 1)[0]);
   heroCovers.replaceChildren(...fan.map((w) => bookCover(w, "", false)));
   hero.classList.remove("hero--plain");
+
+  const recent = (site.recent || []).map(forShelf);
+  if (recent.length) {
+    recentShelf.replaceChildren(...recent.slice(0, SHELF_SIZE).map(bookCard));
+    recentSection.hidden = false;
+  } else {
+    recentSection.hidden = true;
+  }
   renderCount();
 }
 

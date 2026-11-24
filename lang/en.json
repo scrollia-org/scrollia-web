@@ -35,7 +35,9 @@
     "loading": "Loading catalog…",
     "error": "We couldn't load the catalog right now.",
     "retry": "Try again",
-    "all": "Browse the whole catalog"
+    "all": "Browse the whole catalog",
+    "recent": "Just added",
+    "recentAll": "See what’s new"
   },
   "browse": {
     "metaTitle": "Catalog · Scrollia",
@@ -54,7 +56,8 @@
     "sortTitle": "Title A–Z",
     "sortAuthor": "Author A–Z",
     "allLanguages": "All languages",
-    "allGenres": "All genres"
+    "allGenres": "All genres",
+    "sortAdded": "Just added"
   },
   "feat": {
     "free": {

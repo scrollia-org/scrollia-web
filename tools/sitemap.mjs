@@ -1,4 +1,6 @@
-// Regenerate sitemap.xml from the Scrollia API catalog.
+// Regenerate sitemap.xml from a live Scrollia API (dev / web-only clone).
+// Production deploys use `python3 -m pipeline.sitemap` from the monorepo
+// (scripts/deploy-prod.sh) so the file always matches scrollia.db.
 // Development tool (not in sw.js PRECACHE).
 //
 //   API=http://127.0.0.1:8000 node tools/sitemap.mjs
