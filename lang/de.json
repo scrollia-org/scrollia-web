@@ -77,7 +77,7 @@
     "point2": "Dein Fortschritt wird in jedem Buch gespeichert.",
     "point3": "Anpassbare Typografie und eine Schrift für Legasthenie.",
     "download": "APK herunterladen",
-    "play": "Google Play · bald",
+    "play": "Google Play",
     "readerMeta": "Teil 1 von 3 · 3 %",
     "themeLabel": "Lesedesign",
     "themePaper": "Papier",
@@ -97,7 +97,8 @@
     "built": "Aufgebaut auf dem Korpus von <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a>, mit Ausgaben von <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> und <a href=\"https://www.liberliber.it\" rel=\"noopener\">Liber Liber</a>",
     "legal": "Die Bücher sind in ihren jeweiligen Rechtsordnungen gemeinfrei.",
     "privacy": "Datenschutz",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "code": "Quellcode"
   },
   "work": {
     "back": "Zurück zum Katalog",
@@ -219,7 +220,7 @@
     "syncTitle": "Teilen sich App und Web meine Bibliothek?",
     "sync": "Nein. Ohne Konten keine Cloud: jede Seite speichert bei dir auf dem Gerät. Was auf dem Telefon ist, erscheint nicht von allein im Browser, und umgekehrt. Wenn die Leute später Sync zwischen Geräten wollen, schauen wir drauf.",
     "freeTitle": "Ist es kostenlos und Open Source?",
-    "free": "Ja: Lesen ist gratis und ohne Werbung. Die App kommt als APK von <a href=\"https://github.com/scrollia-org/scrollia-android/releases/latest\" rel=\"noopener\">GitHub</a> (und Google Play, wenn der Eintrag öffentlich ist). Der Code von <a href=\"https://github.com/scrollia-org/scrollia-web\" rel=\"noopener\">Web</a> und <a href=\"https://github.com/scrollia-org/scrollia-android\" rel=\"noopener\">App</a> liegt unter scrollia-org.",
+    "free": "Ja: Lesen ist gratis und ohne Werbung. Die App gibt es bei <a href=\"https://play.google.com/store/apps/details?id=org.scrollia.app&pcampaignid=web_share\" rel=\"noopener\">Google Play</a> und als APK von <a href=\"https://github.com/scrollia-org/scrollia-android/releases/latest\" rel=\"noopener\">GitHub</a>. Der Code von <a href=\"https://github.com/scrollia-org/scrollia-web\" rel=\"noopener\">Web</a> und <a href=\"https://github.com/scrollia-org/scrollia-android\" rel=\"noopener\">App</a> liegt unter <a href=\"https://github.com/scrollia-org\" rel=\"noopener\">scrollia-org</a>.",
     "iosTitle": "Warum gibt es keine iOS-App?",
     "ios": "Weil ich iOS nicht gut kenne: Ich habe keine Apple-Geräte und kein Entwicklerkonto, um dort zu veröffentlichen. Die Website geht auf iPhone und iPad im Browser. Wenn jemand kann und will, bei einer nativen Apple-App zu helfen, bin ich offen: schreib an <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>."
   }

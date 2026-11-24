@@ -76,7 +76,7 @@
     "point2": "每本书都会保存你的阅读进度。",
     "point3": "可调整的排版，以及适合阅读障碍者的字体。",
     "download": "下载 APK",
-    "play": "Google Play · 即将推出",
+    "play": "Google Play",
     "readerMeta": "第 1 篇，共 20 篇 · 3%",
     "readerChapter": "学而第一",
     "readerText": "子曰：“学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知而不愠，不亦君子乎？”有子曰：“其为人也孝弟，而好犯上者，鲜矣；不好犯上，而好作乱者，未之有也。君子务本，本立而道生。孝弟也者，其为仁之本与！”",
@@ -96,7 +96,8 @@
     "built": "基于 <a href=\"https://www.gutenberg.org\" rel=\"noopener\">Project Gutenberg</a> 的语料构建，并采用 <a href=\"https://standardebooks.org\" rel=\"noopener\">Standard Ebooks</a> 与 <a href=\"https://www.liberliber.it\" rel=\"noopener\">Liber Liber</a> 的版本",
     "legal": "这些书籍在其所属司法管辖区内属于公有领域。",
     "privacy": "隐私",
-    "faq": "常见问题"
+    "faq": "常见问题",
+    "code": "源码"
   },
   "work": {
     "back": "返回书目",
@@ -217,7 +218,7 @@
     "syncTitle": "应用和网页会共享我的书库吗？",
     "sync": "不会。没有账户就没有云端：各自把数据存在你的设备上。手机上的内容不会自己出现在浏览器，反过来也一样。若以后大家希望跨设备同步，可以再看。",
     "freeTitle": "免费吗？开源吗？",
-    "free": "是的：阅读免费且无广告。应用可从 <a href=\"https://github.com/scrollia-org/scrollia-android/releases/latest\" rel=\"noopener\">GitHub</a> 下载 APK（Google Play 上架公开后也可）。<a href=\"https://github.com/scrollia-org/scrollia-web\" rel=\"noopener\">网页</a>与<a href=\"https://github.com/scrollia-org/scrollia-android\" rel=\"noopener\">应用</a>代码在 scrollia-org 下。",
+    "free": "是的：阅读免费且无广告。应用可在 <a href=\"https://play.google.com/store/apps/details?id=org.scrollia.app&pcampaignid=web_share\" rel=\"noopener\">Google Play</a> 获取，也可从 <a href=\"https://github.com/scrollia-org/scrollia-android/releases/latest\" rel=\"noopener\">GitHub</a> 下载 APK。<a href=\"https://github.com/scrollia-org/scrollia-web\" rel=\"noopener\">网页</a>与<a href=\"https://github.com/scrollia-org/scrollia-android\" rel=\"noopener\">应用</a>代码在 <a href=\"https://github.com/scrollia-org\" rel=\"noopener\">scrollia-org</a> 下。",
     "iosTitle": "为什么没有 iOS 应用？",
     "ios": "因为我不熟 iOS：没有苹果设备，也没有开发者账号可以上架。网站可以在 iPhone 和 iPad 的浏览器里用。如果有人能够并愿意帮忙做原生苹果应用，我很乐意：请发信至 <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>。"
   }
