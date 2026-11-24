@@ -36,7 +36,9 @@
     "loading": "Chargement du catalogue…",
     "error": "Impossible de charger le catalogue pour le moment.",
     "retry": "Réessayer",
-    "all": "Voir tout le catalogue"
+    "all": "Voir tout le catalogue",
+    "recent": "Nouveautés",
+    "recentAll": "Voir les nouveautés"
   },
   "browse": {
     "metaTitle": "Catalogue · Scrollia",
@@ -55,7 +57,8 @@
     "sortTitle": "Titre A–Z",
     "sortAuthor": "Auteur A–Z",
     "allLanguages": "Toutes les langues",
-    "allGenres": "Tous les genres"
+    "allGenres": "Tous les genres",
+    "sortAdded": "Nouveautés"
   },
   "feat": {
     "free": {
@@ -210,7 +213,7 @@
     "adsTitle": "Pourquoi ni publicité ni comptes ?",
     "ads": "Ce qui compte pour moi, c’est que chacun puisse lire. J’ai commencé sans comptes, sans publicité et en open source parce que ça me semblait juste: les classiques ne devraient pas être derrière un paywall ni un profil. Des gens ont dit que des comptes ou une communauté seraient super; on pourra ajouter ça plus tard si c’est utile. Scrollia est pour ceux qui l’utilisent: s’ils demandent des changements, on les fait. Je paie le serveur et le travail éditorial; si une page de soutien apparaît un jour, elle sera volontaire et à part.",
     "typoTitle": "Comment signaler une coquille ?",
-    "typo": "Écrivez-moi à <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a> avec le titre, la langue et, si possible, le chapitre ou un court extrait. Pour l’instant c’est par e-mail; plus tard il y aura quelque chose de plus simple depuis la lecture.",
+    "typo": "Dans l’app Android : menu ⋮ du lecteur (« Signaler une coquille ») ou sélectionnez le texte et « Signaler coquille » ; le message est prérempli avec l’œuvre et le chapitre. Vous pouvez aussi écrire à <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
     "progressTitle": "Comment fonctionnent la progression et « Continuer la lecture » ?",
     "progress": "Dans l’app et sur le web, la progression est enregistrée sur cet appareil (ou dans ce navigateur). Au retour, « Continuer la lecture » vous remet où vous étiez. Pas besoin de compte. Si vous effacez les données de l’app ou du site, ou changez de téléphone ou de navigateur, cette progression ne bouge pas toute seule.",
     "importTitle": "Puis-je importer mes propres livres ?",

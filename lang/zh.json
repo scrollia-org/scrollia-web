@@ -34,7 +34,9 @@
     "loading": "正在加载书目…",
     "error": "暂时无法加载书目。",
     "retry": "重试",
-    "all": "查看全部书目"
+    "all": "查看全部书目",
+    "recent": "新上架",
+    "recentAll": "查看新书"
   },
   "browse": {
     "metaTitle": "书目 · Scrollia",
@@ -53,7 +55,8 @@
     "sortTitle": "书名 A–Z",
     "sortAuthor": "作者 A–Z",
     "allLanguages": "全部语言",
-    "allGenres": "全部类型"
+    "allGenres": "全部类型",
+    "sortAdded": "新上架"
   },
   "feat": {
     "free": {
@@ -206,7 +209,7 @@
     "adsTitle": "为什么没有广告也没有账户？",
     "ads": "我真正在意的是：任何人都能阅读。我一开始就没有账户、没有广告、并开源，因为我觉得这样才对：经典不该被付费墙或个人资料挡住。有人觉得账户或社区功能会很好；如果有需要，以后可以加。Scrollia 是给使用者的：大家要改，就改。服务器和编辑成本目前由我承担；若将来有支持页，也会是自愿且独立的。",
     "typoTitle": "如何报告错字？",
-    "typo": "请发信至 <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>，写明书名、语言，如有可能附上章节或一小段原文。目前用邮件；之后会在阅读里做更方便的方式。",
+    "typo": "在 Android 应用中：阅读器 ⋮ 菜单（「报告错字」）或选中文字后点「报告错字」；邮件会预填书名与章节。也可以发信至 <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>。",
     "progressTitle": "阅读进度和「继续阅读」如何工作？",
     "progress": "在应用和网页上，进度保存在该设备（或该浏览器）本地。回来时，「继续阅读」会带到你离开的位置。不需要账户。若清除应用或网站数据，或换手机、换浏览器，进度不会自己跟着走。",
     "importTitle": "可以导入自己的书吗？",

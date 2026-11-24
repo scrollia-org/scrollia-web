@@ -48,6 +48,16 @@ Every new runtime file (HTML, JavaScript, CSS, translation, font, or image) must
 
 The service worker uses a network-first strategy. EPUB chunks are cached by byte range and file version so an opened book remains readable offline.
 
+## Sitemap
+
+`sitemap.xml` lists every work page. In the monorepo it is regenerated from
+the API catalog on each production deploy (`./scripts/deploy-prod.sh` →
+`python3 -m pipeline.sitemap`). Against a live API only:
+
+```bash
+API=https://api.scrollia.org node tools/sitemap.mjs
+```
+
 ## Screenshots
 
 The dependency-free screenshot tool requires Node.js 22 or newer and Firefox:

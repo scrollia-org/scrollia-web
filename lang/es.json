@@ -35,7 +35,9 @@
     "loading": "Cargando catálogo…",
     "error": "No pudimos cargar el catálogo ahora mismo.",
     "retry": "Reintentar",
-    "all": "Ver todo el catálogo"
+    "all": "Ver todo el catálogo",
+    "recent": "Recién llegados",
+    "recentAll": "Ver las novedades"
   },
   "browse": {
     "metaTitle": "Catálogo · Scrollia",
@@ -54,7 +56,8 @@
     "sortTitle": "Título A–Z",
     "sortAuthor": "Autor A–Z",
     "allLanguages": "Todos los idiomas",
-    "allGenres": "Todos los géneros"
+    "allGenres": "Todos los géneros",
+    "sortAdded": "Recién llegados"
   },
   "feat": {
     "free": {
@@ -209,7 +212,7 @@
     "adsTitle": "¿Por qué no hay anuncios ni cuentas?",
     "ads": "Lo que me importa de verdad es que cualquiera pueda leer. Empecé sin cuentas, sin anuncios y en abierto porque me parecía bien: los clásicos no deberían estar detrás de un paywall ni de un perfil. Hay quien ha dicho que cuentas o una comunidad irían genial; se puede añadir después si hace falta. Scrollia es de la gente que la usa: si piden cambios, se hacen. El servidor y el trabajo editorial los pago yo; si algún día hay una página de apoyo, será voluntaria y aparte.",
     "typoTitle": "¿Cómo aviso de una errata?",
-    "typo": "Escríbeme a <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a> con el título, el idioma y, si puedes, el capítulo o un trozo de texto. Ahora es por correo; más adelante habrá algo más cómodo desde la lectura.",
+    "typo": "En la app Android: menú ⋮ del lector («Avisar de una errata») o selecciona el texto y «Avisar errata»; el correo se rellena con la obra y el capítulo. También puedes escribir a <a href=\"mailto:contact@scrollia.org\">contact@scrollia.org</a>.",
     "progressTitle": "¿Cómo funciona el progreso y «Seguir leyendo»?",
     "progress": "En la app y en la web el progreso se guarda en ese dispositivo (o en ese navegador). Cuando vuelves, «Seguir leyendo» te deja donde estabas. No hace falta cuenta. Si borras los datos de la app o del sitio, o cambias de teléfono o de navegador, ese progreso no se mueve solo.",
     "importTitle": "¿Puedo importar mis propios libros?",

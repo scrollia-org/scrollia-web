@@ -25,7 +25,10 @@ function t(key) {
 function applyStrings() {
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const value = t(el.dataset.i18n);
-    if (value !== null) el.innerHTML = value;
+    if (value === null) return;
+    /* <option> text must stay plain: innerHTML can drop the selection in some engines. */
+    if (el.tagName === "OPTION") el.textContent = value;
+    else el.innerHTML = value;
   });
   document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
     const value = t(el.dataset.i18nAria);

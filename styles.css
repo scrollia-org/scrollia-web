@@ -605,6 +605,17 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .catalog__all::after { content: " →"; }
 .catalog__all:dir(rtl)::after { content: " ←"; }
 
+/* Newest additions under the popular shelf: caption like Continue reading. */
+.catalog__recent {
+  margin-top: var(--space-xxl);
+}
+.catalog__recent .caption {
+  margin-bottom: var(--space-lg);
+}
+.catalog__all--main {
+  margin-top: var(--space-xl);
+}
+
 /* ---------- full catalog ---------- */
 
 .browse__title { font-size: var(--text-h1); font-weight: 600; margin-bottom: var(--space-lg); }
@@ -690,7 +701,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   font-weight: 500;
 }
 
-/* Sorting does not narrow results: show it as text beside the count, without a box. */
+/* Sorting does not narrow results: show it as text beside the count, without a box.
+   In dark themes a transparent native <select> paints a light system field — use
+   the raised surface so closed and open states stay on-token (DESIGN.md). */
 .browse__picker--quiet {
   min-block-size: 2.25rem;
   padding-inline: var(--space-xs) calc(var(--space-xs) + 1rem);
@@ -699,6 +712,18 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   background-position: calc(100% - 0.65rem) 55%, calc(100% - 0.3rem) 55%;
   color: var(--ink);
   font-weight: 500;
+}
+
+:is([data-theme="dark"], [data-theme="amoled"]) .browse__picker--quiet {
+  background-color: var(--paper-raised);
+  border-color: var(--border);
+}
+
+.browse__picker option,
+.nav__lang option,
+.work__select option {
+  background-color: var(--paper-raised);
+  color: var(--ink);
 }
 
 /* Count on the left and sorting on the right: sorting belongs with the result,
@@ -1542,6 +1567,7 @@ html:has(.reading) { scroll-behavior: auto; }
   .band .section { padding-block: var(--space-xl); }
   /* Two preview rows on the landing; the rest are under "View full catalog". */
   #catalogo .shelf > :nth-child(n + 5) { display: none; }
+  #catalogo .catalog__recent .shelf > :nth-child(n + 5) { display: none; }
   .hero__actions .btn { flex: 1 1 12rem; justify-content: center; text-align: center; }
   /* Read takes the full width; Download and Share share the row below. */
   .work__actions .btn { flex: 1 1 auto; text-align: center; }
